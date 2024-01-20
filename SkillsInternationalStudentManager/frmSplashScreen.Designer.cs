@@ -41,10 +41,11 @@
             // progressBar1
             // 
             progressBar1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            progressBar1.Location = new Point(96, 348);
+            progressBar1.Location = new Point(109, 443);
+            progressBar1.Margin = new Padding(4);
             progressBar1.MarqueeAnimationSpeed = 30;
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(88, 12);
+            progressBar1.Size = new Size(91, 8);
             progressBar1.Style = ProgressBarStyle.Marquee;
             progressBar1.TabIndex = 0;
             // 
@@ -56,9 +57,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(24, 200);
+            label1.Location = new Point(19, 246);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(256, 41);
+            label1.Size = new Size(313, 50);
             label1.TabIndex = 1;
             label1.Text = "Student Manager";
             // 
@@ -67,8 +69,9 @@
             pictureBox1.Dock = DockStyle.Top;
             pictureBox1.Image = Properties.Resources._90sclassroom_bg;
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(374, 152);
+            pictureBox1.Size = new Size(466, 190);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -78,9 +81,10 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(32, 344);
+            label2.Location = new Point(29, 436);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(59, 15);
+            label2.Size = new Size(76, 20);
             label2.TabIndex = 3;
             label2.Text = "Loading...";
             // 
@@ -88,18 +92,19 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(28, 176);
+            label3.Location = new Point(24, 216);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(214, 25);
+            label3.Size = new Size(275, 31);
             label3.TabIndex = 4;
             label3.Text = "Skills International School";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // frmSplashScreen
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(374, 374);
+            ClientSize = new Size(466, 466);
             ControlBox = false;
             Controls.Add(label3);
             Controls.Add(label2);
@@ -107,6 +112,7 @@
             Controls.Add(label1);
             Controls.Add(progressBar1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmSplashScreen";
