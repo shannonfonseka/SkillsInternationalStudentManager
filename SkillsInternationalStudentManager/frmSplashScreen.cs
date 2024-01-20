@@ -19,10 +19,5 @@
             Hide();
             varMainForm.Show();         
         }
-
-        private void frmSplashScreen_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

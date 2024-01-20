@@ -32,8 +32,7 @@
             // 
             // frmStudentsManager
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(800, 450);
             Name = "frmStudentsManager";
             Text = "frmStudentsManager";
