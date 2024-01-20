@@ -90,7 +90,7 @@
             menuitemExit.Image = Properties.Resources.cancel;
             menuitemExit.Name = "menuitemExit";
             menuitemExit.ShortcutKeys = Keys.Alt | Keys.F4;
-            menuitemExit.Size = new Size(224, 26);
+            menuitemExit.Size = new Size(169, 26);
             menuitemExit.Text = "E&xit";
             menuitemExit.Click += menuitemExit_Click;
             // 
@@ -341,6 +341,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Skills International Student Manager";
+            FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             menuMain.ResumeLayout(false);
             menuMain.PerformLayout();

@@ -5,9 +5,9 @@ namespace SkillsInternationalStudentManager
         public static Form1 communicator;
         public bool varIsManageStudentsWindowOpen = false;
         public Form1()
-        {
+        {           
             InitializeComponent();
-        }
+        }      
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -80,6 +80,11 @@ namespace SkillsInternationalStudentManager
         private void menuitemExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
