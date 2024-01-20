@@ -44,7 +44,7 @@
             progressBar1.Location = new Point(96, 348);
             progressBar1.MarqueeAnimationSpeed = 30;
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(112, 8);
+            progressBar1.Size = new Size(88, 12);
             progressBar1.Style = ProgressBarStyle.Marquee;
             progressBar1.TabIndex = 0;
             // 
@@ -68,7 +68,7 @@
             pictureBox1.Image = Properties.Resources._90sclassroom_bg;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(382, 152);
+            pictureBox1.Size = new Size(378, 152);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -88,7 +88,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(32, 176);
+            label3.Location = new Point(28, 176);
             label3.Name = "label3";
             label3.Size = new Size(214, 25);
             label3.TabIndex = 4;
@@ -98,7 +98,7 @@
             // frmSplashScreen
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(382, 382);
+            ClientSize = new Size(378, 378);
             ControlBox = false;
             Controls.Add(label3);
             Controls.Add(label2);
