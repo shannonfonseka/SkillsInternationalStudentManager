@@ -68,7 +68,7 @@
             pictureBox1.Image = Properties.Resources._90sclassroom_bg;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(378, 152);
+            pictureBox1.Size = new Size(374, 152);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -97,8 +97,9 @@
             // 
             // frmSplashScreen
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(378, 378);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(374, 374);
             ControlBox = false;
             Controls.Add(label3);
             Controls.Add(label2);

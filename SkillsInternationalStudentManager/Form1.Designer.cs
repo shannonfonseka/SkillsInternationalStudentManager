@@ -75,14 +75,14 @@
             menuMain.MdiWindowListItem = menuWindow;
             menuMain.Name = "menuMain";
             menuMain.RenderMode = ToolStripRenderMode.Professional;
-            menuMain.Size = new Size(882, 28);
+            menuMain.Size = new Size(884, 24);
             menuMain.TabIndex = 1;
             // 
             // menuFile
             // 
             menuFile.DropDownItems.AddRange(new ToolStripItem[] { menuitemExit });
             menuFile.Name = "menuFile";
-            menuFile.Size = new Size(46, 24);
+            menuFile.Size = new Size(37, 20);
             menuFile.Text = "&File";
             // 
             // menuitemExit
@@ -90,7 +90,7 @@
             menuitemExit.Image = Properties.Resources.cancel;
             menuitemExit.Name = "menuitemExit";
             menuitemExit.ShortcutKeys = Keys.Alt | Keys.F4;
-            menuitemExit.Size = new Size(169, 26);
+            menuitemExit.Size = new Size(135, 22);
             menuitemExit.Text = "E&xit";
             menuitemExit.Click += menuitemExit_Click;
             // 
@@ -98,7 +98,7 @@
             // 
             menuDatabase.DropDownItems.AddRange(new ToolStripItem[] { menuitemManageAdmins, menuitemLogOutSystem });
             menuDatabase.Name = "menuDatabase";
-            menuDatabase.Size = new Size(86, 24);
+            menuDatabase.Size = new Size(67, 20);
             menuDatabase.Text = "Database";
             // 
             // menuitemManageAdmins
@@ -106,7 +106,7 @@
             menuitemManageAdmins.Image = Properties.Resources.administrator;
             menuitemManageAdmins.Name = "menuitemManageAdmins";
             menuitemManageAdmins.ShortcutKeys = Keys.F2;
-            menuitemManageAdmins.Size = new Size(243, 26);
+            menuitemManageAdmins.Size = new Size(196, 22);
             menuitemManageAdmins.Text = "Manage admins";
             // 
             // menuitemLogOutSystem
@@ -114,7 +114,7 @@
             menuitemLogOutSystem.Image = Properties.Resources.door_out;
             menuitemLogOutSystem.Name = "menuitemLogOutSystem";
             menuitemLogOutSystem.ShortcutKeys = Keys.Control | Keys.X;
-            menuitemLogOutSystem.Size = new Size(243, 26);
+            menuitemLogOutSystem.Size = new Size(196, 22);
             menuitemLogOutSystem.Text = "Log out system";
             menuitemLogOutSystem.Click += menuitemLogOutSystem_Click;
             // 
@@ -122,7 +122,7 @@
             // 
             menuStudents.DropDownItems.AddRange(new ToolStripItem[] { menuitemAddStudent, menuitemManageStudents, menuitemManageParents, toolStripSeparator1, menuitemSubjects });
             menuStudents.Name = "menuStudents";
-            menuStudents.Size = new Size(80, 24);
+            menuStudents.Size = new Size(65, 20);
             menuStudents.Text = "&Students";
             // 
             // menuitemAddStudent
@@ -130,7 +130,7 @@
             menuitemAddStudent.Image = Properties.Resources.user_add;
             menuitemAddStudent.Name = "menuitemAddStudent";
             menuitemAddStudent.ShortcutKeys = Keys.Control | Keys.F3;
-            menuitemAddStudent.Size = new Size(333, 26);
+            menuitemAddStudent.Size = new Size(268, 22);
             menuitemAddStudent.Text = "&Add new student";
             // 
             // menuitemManageStudents
@@ -138,7 +138,7 @@
             menuitemManageStudents.Image = Properties.Resources.user_student;
             menuitemManageStudents.Name = "menuitemManageStudents";
             menuitemManageStudents.ShortcutKeys = Keys.F3;
-            menuitemManageStudents.Size = new Size(333, 26);
+            menuitemManageStudents.Size = new Size(268, 22);
             menuitemManageStudents.Text = "Manage &Students";
             menuitemManageStudents.Click += menuitemManageStudents_Click;
             // 
@@ -147,26 +147,26 @@
             menuitemManageParents.Image = Properties.Resources.users_men_women;
             menuitemManageParents.Name = "menuitemManageParents";
             menuitemManageParents.ShortcutKeys = Keys.Shift | Keys.F3;
-            menuitemManageParents.Size = new Size(333, 26);
+            menuitemManageParents.Size = new Size(268, 22);
             menuitemManageParents.Text = "Manage &Parents/Guardians";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(330, 6);
+            toolStripSeparator1.Size = new Size(265, 6);
             // 
             // menuitemSubjects
             // 
             menuitemSubjects.Image = Properties.Resources.books_stack;
             menuitemSubjects.Name = "menuitemSubjects";
-            menuitemSubjects.Size = new Size(333, 26);
+            menuitemSubjects.Size = new Size(268, 22);
             menuitemSubjects.Text = "Manage S&ubjects/Courses";
             // 
             // menuTeachers
             // 
             menuTeachers.DropDownItems.AddRange(new ToolStripItem[] { menuAddTeacher, menuManageTeacher, toolStripSeparator2, menuTeacherNoticeBoard });
             menuTeachers.Name = "menuTeachers";
-            menuTeachers.Size = new Size(80, 24);
+            menuTeachers.Size = new Size(64, 20);
             menuTeachers.Text = "&Teachers";
             // 
             // menuAddTeacher
@@ -174,7 +174,7 @@
             menuAddTeacher.Image = Properties.Resources.user_add;
             menuAddTeacher.Name = "menuAddTeacher";
             menuAddTeacher.ShortcutKeys = Keys.Control | Keys.F4;
-            menuAddTeacher.Size = new Size(261, 26);
+            menuAddTeacher.Size = new Size(209, 22);
             menuAddTeacher.Text = "&Add new teacher";
             // 
             // menuManageTeacher
@@ -182,51 +182,51 @@
             menuManageTeacher.Image = Properties.Resources.users_5;
             menuManageTeacher.Name = "menuManageTeacher";
             menuManageTeacher.ShortcutKeys = Keys.F4;
-            menuManageTeacher.Size = new Size(261, 26);
+            menuManageTeacher.Size = new Size(209, 22);
             menuManageTeacher.Text = "Manage &Teachers";
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(258, 6);
+            toolStripSeparator2.Size = new Size(206, 6);
             // 
             // menuTeacherNoticeBoard
             // 
             menuTeacherNoticeBoard.Image = Properties.Resources.notes_pin;
             menuTeacherNoticeBoard.Name = "menuTeacherNoticeBoard";
-            menuTeacherNoticeBoard.Size = new Size(261, 26);
+            menuTeacherNoticeBoard.Size = new Size(209, 22);
             menuTeacherNoticeBoard.Text = "Teacher's notice board";
             // 
             // menuWindow
             // 
             menuWindow.DropDownItems.AddRange(new ToolStripItem[] { menuitemResetLayout, menuitemCascadeWindows, menuitemHideAll });
             menuWindow.Name = "menuWindow";
-            menuWindow.Size = new Size(78, 24);
+            menuWindow.Size = new Size(63, 20);
             menuWindow.Text = "&Window";
             // 
             // menuitemResetLayout
             // 
             menuitemResetLayout.Name = "menuitemResetLayout";
-            menuitemResetLayout.Size = new Size(229, 26);
+            menuitemResetLayout.Size = new Size(183, 22);
             menuitemResetLayout.Text = "Reset window layout";
             // 
             // menuitemCascadeWindows
             // 
             menuitemCascadeWindows.Name = "menuitemCascadeWindows";
-            menuitemCascadeWindows.Size = new Size(229, 26);
+            menuitemCascadeWindows.Size = new Size(183, 22);
             menuitemCascadeWindows.Text = "Cascade windows";
             // 
             // menuitemHideAll
             // 
             menuitemHideAll.Name = "menuitemHideAll";
-            menuitemHideAll.Size = new Size(229, 26);
+            menuitemHideAll.Size = new Size(183, 22);
             menuitemHideAll.Text = "Hide all";
             // 
             // menuHelp
             // 
             menuHelp.DropDownItems.AddRange(new ToolStripItem[] { menuitemsAbout });
             menuHelp.Name = "menuHelp";
-            menuHelp.Size = new Size(55, 24);
+            menuHelp.Size = new Size(44, 20);
             menuHelp.Text = "&Help";
             // 
             // menuitemsAbout
@@ -234,7 +234,7 @@
             menuitemsAbout.Image = Properties.Resources.information;
             menuitemsAbout.Name = "menuitemsAbout";
             menuitemsAbout.ShortcutKeys = Keys.F1;
-            menuitemsAbout.Size = new Size(275, 26);
+            menuitemsAbout.Size = new Size(220, 22);
             menuitemsAbout.Text = "About Student Manager";
             // 
             // toolbarMain
@@ -242,10 +242,10 @@
             toolbarMain.GripStyle = ToolStripGripStyle.Hidden;
             toolbarMain.ImageScalingSize = new Size(32, 32);
             toolbarMain.Items.AddRange(new ToolStripItem[] { toolbarbtnManageStudents, toolbarbtnManageParents, toolbarbtnManageSubjects, toolStripSeparator3, toolbarManageTeachers, toolbarbtnNoticeBoard, toolbarbtnLogOutSystem, toolStripSeparator4 });
-            toolbarMain.Location = new Point(0, 28);
+            toolbarMain.Location = new Point(0, 24);
             toolbarMain.Name = "toolbarMain";
             toolbarMain.RenderMode = ToolStripRenderMode.System;
-            toolbarMain.Size = new Size(882, 62);
+            toolbarMain.Size = new Size(884, 57);
             toolbarMain.TabIndex = 4;
             // 
             // toolbarbtnManageStudents
@@ -254,7 +254,7 @@
             toolbarbtnManageStudents.ImageTransparentColor = Color.Magenta;
             toolbarbtnManageStudents.Name = "toolbarbtnManageStudents";
             toolbarbtnManageStudents.Padding = new Padding(5, 2, 5, 1);
-            toolbarbtnManageStudents.Size = new Size(80, 59);
+            toolbarbtnManageStudents.Size = new Size(67, 54);
             toolbarbtnManageStudents.Text = "Students";
             toolbarbtnManageStudents.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnManageStudents.ToolTipText = "Opens the \"Students\" window, where you can edit\r\nor remove students. (F3)";
@@ -266,7 +266,7 @@
             toolbarbtnManageParents.ImageTransparentColor = Color.Magenta;
             toolbarbtnManageParents.Name = "toolbarbtnManageParents";
             toolbarbtnManageParents.Padding = new Padding(5, 2, 5, 1);
-            toolbarbtnManageParents.Size = new Size(142, 59);
+            toolbarbtnManageParents.Size = new Size(118, 54);
             toolbarbtnManageParents.Text = "Parents/Guardians";
             toolbarbtnManageParents.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnManageParents.ToolTipText = "Opens the \"Parents/Guardian\" window, where you can edit\r\nor remove parents. (Shift+F3)";
@@ -277,7 +277,7 @@
             toolbarbtnManageSubjects.ImageTransparentColor = Color.Magenta;
             toolbarbtnManageSubjects.Name = "toolbarbtnManageSubjects";
             toolbarbtnManageSubjects.Padding = new Padding(5, 2, 5, 1);
-            toolbarbtnManageSubjects.Size = new Size(135, 59);
+            toolbarbtnManageSubjects.Size = new Size(112, 54);
             toolbarbtnManageSubjects.Text = "Subjects/Courses";
             toolbarbtnManageSubjects.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnManageSubjects.ToolTipText = "Opens the \"Subjects/Courses\" window, where you can edit\r\nor remove subjects or courses. ";
@@ -285,7 +285,7 @@
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 62);
+            toolStripSeparator3.Size = new Size(6, 57);
             // 
             // toolbarManageTeachers
             // 
@@ -293,7 +293,7 @@
             toolbarManageTeachers.ImageTransparentColor = Color.Magenta;
             toolbarManageTeachers.Name = "toolbarManageTeachers";
             toolbarManageTeachers.Padding = new Padding(5, 2, 5, 1);
-            toolbarManageTeachers.Size = new Size(80, 59);
+            toolbarManageTeachers.Size = new Size(66, 54);
             toolbarManageTeachers.Text = "Teachers";
             toolbarManageTeachers.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarManageTeachers.ToolTipText = "Opens the \"Teachers\" window, where you can edit\r\nor remove teachers. (F4)";
@@ -304,7 +304,7 @@
             toolbarbtnNoticeBoard.ImageTransparentColor = Color.Magenta;
             toolbarbtnNoticeBoard.Name = "toolbarbtnNoticeBoard";
             toolbarbtnNoticeBoard.Padding = new Padding(5, 2, 5, 1);
-            toolbarbtnNoticeBoard.Size = new Size(111, 59);
+            toolbarbtnNoticeBoard.Size = new Size(90, 54);
             toolbarbtnNoticeBoard.Text = "Notice Board";
             toolbarbtnNoticeBoard.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnNoticeBoard.ToolTipText = "Opens the \"Notice Board\" window, where teachers can check for\r\nmessages about school activites or events.";
@@ -316,7 +316,7 @@
             toolbarbtnLogOutSystem.ImageTransparentColor = Color.Magenta;
             toolbarbtnLogOutSystem.Name = "toolbarbtnLogOutSystem";
             toolbarbtnLogOutSystem.Padding = new Padding(5, 2, 5, 1);
-            toolbarbtnLogOutSystem.Size = new Size(74, 59);
+            toolbarbtnLogOutSystem.Size = new Size(62, 54);
             toolbarbtnLogOutSystem.Text = "Log out";
             toolbarbtnLogOutSystem.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnLogOutSystem.ToolTipText = "Log out from the system safely and return to the login screen.";
@@ -326,12 +326,13 @@
             // 
             toolStripSeparator4.Alignment = ToolStripItemAlignment.Right;
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(6, 62);
+            toolStripSeparator4.Size = new Size(6, 57);
             // 
             // Form1
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(882, 553);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(884, 561);
             Controls.Add(toolbarMain);
             Controls.Add(menuMain);
             IsMdiContainer = true;

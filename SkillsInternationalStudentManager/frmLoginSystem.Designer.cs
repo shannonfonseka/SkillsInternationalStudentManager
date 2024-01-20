@@ -218,7 +218,8 @@
             // 
             // frmLoginSystem
             // 
-            AutoScaleMode = AutoScaleMode.None;
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(490, 490);
             ControlBox = false;
             Controls.Add(flowpanelLoginLayout);
