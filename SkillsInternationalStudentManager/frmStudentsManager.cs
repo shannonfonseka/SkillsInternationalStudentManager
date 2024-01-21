@@ -25,6 +25,7 @@ namespace SkillsInternationalStudentManager
         private void frmStudentsManager_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1.communicator.varIsManageStudentsWindowOpen = false;
+            Form1.communicator.toolbarbtnManageStudents.Checked = false;
         }
     }
 }

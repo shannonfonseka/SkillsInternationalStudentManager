@@ -8,7 +8,7 @@
         }
         private void frmSplashScreen_Shown(object sender, EventArgs e)
         {
-            timer1.Interval = 4500;
+            timer1.Interval = 900;
             timer1.Start();
         }
 
@@ -17,7 +17,12 @@
             timer1.Stop();
             Form1 varMainForm = new Form1();
             Hide();
-            varMainForm.Show();         
+            varMainForm.Show();
+        }
+
+        private void frmSplashScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -220,6 +220,7 @@
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScroll = true;
             ClientSize = new Size(612, 612);
             ControlBox = false;
             Controls.Add(flowpanelLoginLayout);

@@ -16,9 +16,11 @@ namespace SkillsInternationalStudentManager
         {
             // if you like to wait a few seconds in case that the instance is just 
             // shutting down
-            if (!mutex.WaitOne(TimeSpan.FromSeconds(2), false))
+            if (!mutex.WaitOne(TimeSpan.FromSeconds(0), false))
             {
-                MessageBox.Show("Application already started!", "", MessageBoxButtons.OK);
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(true);
+                MessageBox.Show("Student Manager has already started! Multiple instances cannot be run at the same time. Check your taskbar for the primary instance for Student Manager.","One instance already running...", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -29,14 +31,9 @@ namespace SkillsInternationalStudentManager
                 ApplicationConfiguration.Initialize();
                 Application.Run(new frmSplashScreen());
             }
-            finally { mutex.ReleaseMutex(); } // I find this more explicit
-
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
+            finally { mutex.ReleaseMutex(); } // I find this more explicit            
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            //ApplicationConfiguration.Initialize();
-            //Application.Run(new frmSplashScreen());
         }
     }
 }
