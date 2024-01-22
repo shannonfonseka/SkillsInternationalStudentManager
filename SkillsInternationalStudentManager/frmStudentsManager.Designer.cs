@@ -30,13 +30,13 @@
         {
             splitContainer1 = new SplitContainer();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            label2 = new Label();
             label1 = new Label();
             linkLabel1 = new LinkLabel();
             linkLabel3 = new LinkLabel();
             linkLabel4 = new LinkLabel();
             pictureBox1 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
-            label2 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             button4 = new Button();
             button1 = new Button();
@@ -78,6 +78,7 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.Controls.Add(label2);
             flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Controls.Add(linkLabel1);
             flowLayoutPanel1.Controls.Add(linkLabel3);
@@ -86,15 +87,27 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(196, 158);
+            flowLayoutPanel1.Size = new Size(196, 270);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.WrapContents = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BorderStyle = BorderStyle.Fixed3D;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(0, 0);
+            label2.Margin = new Padding(0, 0, 0, 10);
+            label2.Name = "label2";
+            label2.Size = new Size(193, 102);
+            label2.TabIndex = 5;
+            label2.Text = "Administrators can add, edit and remove students on this window. Refresh database after editing any records.";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 10);
+            label1.Location = new Point(3, 122);
             label1.Margin = new Padding(3, 10, 3, 20);
             label1.Name = "label1";
             label1.Size = new Size(128, 23);
@@ -104,7 +117,7 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(3, 53);
+            linkLabel1.Location = new Point(3, 165);
             linkLabel1.Margin = new Padding(3, 0, 3, 15);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(123, 20);
@@ -115,7 +128,7 @@
             // linkLabel3
             // 
             linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(3, 88);
+            linkLabel3.Location = new Point(3, 200);
             linkLabel3.Margin = new Padding(3, 0, 3, 15);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(122, 20);
@@ -126,7 +139,7 @@
             // linkLabel4
             // 
             linkLabel4.AutoSize = true;
-            linkLabel4.Location = new Point(3, 123);
+            linkLabel4.Location = new Point(3, 235);
             linkLabel4.Margin = new Padding(3, 0, 3, 15);
             linkLabel4.Name = "linkLabel4";
             linkLabel4.Size = new Size(187, 20);
@@ -147,7 +160,6 @@
             // 
             // flowLayoutPanel2
             // 
-            flowLayoutPanel2.Controls.Add(label2);
             flowLayoutPanel2.Controls.Add(tableLayoutPanel1);
             flowLayoutPanel2.Controls.Add(checkedListBox1);
             flowLayoutPanel2.Dock = DockStyle.Fill;
@@ -158,19 +170,8 @@
             flowLayoutPanel2.TabIndex = 0;
             flowLayoutPanel2.WrapContents = false;
             // 
-            // label2
-            // 
-            label2.BorderStyle = BorderStyle.Fixed3D;
-            label2.Location = new Point(10, 10);
-            label2.Margin = new Padding(10, 10, 10, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(758, 24);
-            label2.TabIndex = 0;
-            label2.Text = "Administrators can add, edit and remove students on this window. Refresh database after editing any records.";
-            // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel1.BackColor = SystemColors.ActiveCaption;
             tableLayoutPanel1.ColumnCount = 4;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
@@ -181,8 +182,8 @@
             tableLayoutPanel1.Controls.Add(button1, 1, 0);
             tableLayoutPanel1.Controls.Add(button3, 3, 0);
             tableLayoutPanel1.Controls.Add(button2, 2, 0);
-            tableLayoutPanel1.Location = new Point(10, 44);
-            tableLayoutPanel1.Margin = new Padding(10, 10, 10, 3);
+            tableLayoutPanel1.Location = new Point(10, 10);
+            tableLayoutPanel1.Margin = new Padding(10, 10, 10, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -240,10 +241,10 @@
             // 
             checkedListBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(10, 92);
+            checkedListBox1.Location = new Point(10, 55);
             checkedListBox1.Margin = new Padding(10);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(758, 444);
+            checkedListBox1.Size = new Size(758, 488);
             checkedListBox1.TabIndex = 3;
             // 
             // frmStudentsManager
@@ -285,12 +286,12 @@
         private PictureBox pictureBox1;
         private LinkLabel linkLabel4;
         private FlowLayoutPanel flowLayoutPanel2;
-        private Label label2;
         private TableLayoutPanel tableLayoutPanel1;
         private Button button1;
         private Button button2;
         private Button button3;
         private Button button4;
         private CheckedListBox checkedListBox1;
+        private Label label2;
     }
 }

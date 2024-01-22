@@ -30,19 +30,18 @@
         {
             splitContainer1 = new SplitContainer();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            label2 = new Label();
             label1 = new Label();
             linkLabel3 = new LinkLabel();
             linkLabel4 = new LinkLabel();
             pictureBox1 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
-            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -70,6 +69,7 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.Controls.Add(label2);
             flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Controls.Add(linkLabel3);
             flowLayoutPanel1.Controls.Add(linkLabel4);
@@ -77,15 +77,27 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(196, 123);
+            flowLayoutPanel1.Size = new Size(196, 175);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.WrapContents = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BorderStyle = BorderStyle.Fixed3D;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(0, 0);
+            label2.Margin = new Padding(0, 0, 0, 10);
+            label2.Name = "label2";
+            label2.Size = new Size(178, 42);
+            label2.TabIndex = 5;
+            label2.Text = "Administrators can add students on this window.";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 10);
+            label1.Location = new Point(3, 62);
             label1.Margin = new Padding(3, 10, 3, 20);
             label1.Name = "label1";
             label1.Size = new Size(128, 23);
@@ -95,7 +107,7 @@
             // linkLabel3
             // 
             linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(3, 53);
+            linkLabel3.Location = new Point(3, 105);
             linkLabel3.Margin = new Padding(3, 0, 3, 15);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(122, 20);
@@ -106,7 +118,7 @@
             // linkLabel4
             // 
             linkLabel4.AutoSize = true;
-            linkLabel4.Location = new Point(3, 88);
+            linkLabel4.Location = new Point(3, 140);
             linkLabel4.Margin = new Padding(3, 0, 3, 15);
             linkLabel4.Name = "linkLabel4";
             linkLabel4.Size = new Size(187, 20);
@@ -128,7 +140,6 @@
             // 
             // flowLayoutPanel2
             // 
-            flowLayoutPanel2.Controls.Add(label2);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(0, 0);
@@ -136,16 +147,6 @@
             flowLayoutPanel2.Size = new Size(774, 549);
             flowLayoutPanel2.TabIndex = 0;
             flowLayoutPanel2.WrapContents = false;
-            // 
-            // label2
-            // 
-            label2.BorderStyle = BorderStyle.Fixed3D;
-            label2.Location = new Point(10, 10);
-            label2.Margin = new Padding(10, 10, 10, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(758, 24);
-            label2.TabIndex = 0;
-            label2.Text = "Administrators can add students in this window.";
             // 
             // frmCreateStudent
             // 
@@ -171,7 +172,6 @@
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            flowLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 

@@ -55,7 +55,7 @@
             btnExitSystem.Margin = new Padding(0, 0, 0, 12);
             btnExitSystem.Name = "btnExitSystem";
             btnExitSystem.Size = new Size(164, 24);
-            btnExitSystem.TabIndex = 6;
+            btnExitSystem.TabIndex = 7;
             btnExitSystem.TabStop = true;
             btnExitSystem.Text = "Exit system (Alt+F4)";
             btnExitSystem.TextAlign = ContentAlignment.MiddleRight;
@@ -95,6 +95,7 @@
             // btnLogin
             // 
             btnLogin.Cursor = Cursors.Hand;
+            btnLogin.DialogResult = DialogResult.OK;
             flowpanelLoginLayout.SetFlowBreak(btnLogin, true);
             btnLogin.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.Image = Properties.Resources.door_in1;
@@ -210,7 +211,7 @@
             btnAboutProgram.Margin = new Padding(0, 0, 0, 12);
             btnAboutProgram.Name = "btnAboutProgram";
             btnAboutProgram.Size = new Size(196, 24);
-            btnAboutProgram.TabIndex = 7;
+            btnAboutProgram.TabIndex = 6;
             btnAboutProgram.TabStop = true;
             btnAboutProgram.Text = "About Student Manager";
             btnAboutProgram.TextAlign = ContentAlignment.MiddleRight;

@@ -22,8 +22,10 @@ namespace SkillsInternationalStudentManager
         {
             Form1.communicator.Enabled = true;
             Form1.communicator.toolbarMain.Enabled = true;
-            Form1.communicator.toolbarMain.Visible = true;
+            //Form1.communicator.toolbarMain.Visible = true;
             Form1.communicator.menuMain.Enabled = true;
+            Form1.communicator.toolbarbtnNoticeBoard.Checked=true;
+            Form1.communicator.menuitemNoticeBoard.Checked=true;
             Form1.communicator.panelNoticeBoard.Visible= true;
             varIsLoggedIn= true;
             Close();

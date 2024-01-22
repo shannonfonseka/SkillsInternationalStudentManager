@@ -1,3 +1,5 @@
+using System.Diagnostics.Eventing.Reader;
+
 namespace SkillsInternationalStudentManager
 {
     public partial class Form1 : Form
@@ -10,6 +12,8 @@ namespace SkillsInternationalStudentManager
         public Form1()
         {
             InitializeComponent();
+            MinimumSize = new Size(1200, 800);
+            Size = new Size(1200, 800);
             foreach (ToolStripItem tsi in toolbarMain.Items)
             {
                 tsi.Text = tsi.Text.Replace("|", Environment.NewLine);
@@ -27,7 +31,8 @@ namespace SkillsInternationalStudentManager
         private void procedureShowLogInWindow()
         {
             toolbarMain.Enabled = false;
-            toolbarMain.Visible = false;
+            //toolbarMain.Visible = false;
+            toolbarbtnNoticeBoard.Checked= false;
             menuMain.Enabled = false;
             frmLoginSystem varFrmLoginSystem = new frmLoginSystem();
             //varFrmLoginSystem.MdiParent = this;
@@ -48,8 +53,8 @@ namespace SkillsInternationalStudentManager
                 {
                     childform.Close();
                 }
-                panelNoticeBoard.Visible=false;
-                procedureShowLogInWindow();                
+                panelNoticeBoard.Visible = false;
+                procedureShowLogInWindow();
             }
         }
 
@@ -96,6 +101,21 @@ namespace SkillsInternationalStudentManager
             varFrmCreateStudent.Focus();
         }
 
+        private void procedureShowOrHideNoticeBoard()
+        {
+            if (panelNoticeBoard.Visible)
+            {
+                panelNoticeBoard.Visible = false;
+                toolbarbtnNoticeBoard.Checked = false;
+                menuitemNoticeBoard.Checked = false;                
+            }
+            else
+            {
+                panelNoticeBoard.Visible = true;
+                toolbarbtnNoticeBoard.Checked = true;
+                menuitemNoticeBoard.Checked = true;
+            }            
+        }
         private void menuitemLogOutSystem_Click(object sender, EventArgs e)
         {
             procedureLogOut();
@@ -134,6 +154,18 @@ namespace SkillsInternationalStudentManager
         private void toolbarbtnAddStudent_Click(object sender, EventArgs e)
         {
             procedureShowCreateStudentWindow();
+        }
+
+        private void toolbarbtnNoticeBoard_Click(object sender, EventArgs e)
+        {
+            procedureShowOrHideNoticeBoard();
+
+        }
+
+        private void menuitemNoticeBoard_Click(object sender, EventArgs e)
+        {
+            procedureShowOrHideNoticeBoard();
+
         }
     }
 }
