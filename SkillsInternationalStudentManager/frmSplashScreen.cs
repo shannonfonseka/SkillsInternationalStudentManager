@@ -8,7 +8,7 @@
         }
         private void frmSplashScreen_Shown(object sender, EventArgs e)
         {
-            timer1.Interval = 900;
+            timer1.Interval = 3200;
             timer1.Start();
         }
 

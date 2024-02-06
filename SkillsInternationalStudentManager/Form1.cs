@@ -1,5 +1,3 @@
-using System.Diagnostics.Eventing.Reader;
-
 namespace SkillsInternationalStudentManager
 {
     public partial class Form1 : Form
@@ -31,11 +29,9 @@ namespace SkillsInternationalStudentManager
         private void procedureShowLogInWindow()
         {
             toolbarMain.Enabled = false;
-            //toolbarMain.Visible = false;
-            toolbarbtnNoticeBoard.Checked= false;
+            toolbarbtnNoticeBoard.Checked = false;
             menuMain.Enabled = false;
             frmLoginSystem varFrmLoginSystem = new frmLoginSystem();
-            //varFrmLoginSystem.MdiParent = this;
             varFrmLoginSystem.ShowDialog();
         }
         private void procedureLogOut()
@@ -107,14 +103,14 @@ namespace SkillsInternationalStudentManager
             {
                 panelNoticeBoard.Visible = false;
                 toolbarbtnNoticeBoard.Checked = false;
-                menuitemNoticeBoard.Checked = false;                
+                menuitemNoticeBoard.Checked = false;
             }
             else
             {
                 panelNoticeBoard.Visible = true;
                 toolbarbtnNoticeBoard.Checked = true;
                 menuitemNoticeBoard.Checked = true;
-            }            
+            }
         }
         private void menuitemLogOutSystem_Click(object sender, EventArgs e)
         {
@@ -143,7 +139,8 @@ namespace SkillsInternationalStudentManager
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            e.Cancel = true;
+            procedureLogOut();
         }
 
         private void menuitemAddStudent_Click(object sender, EventArgs e)
