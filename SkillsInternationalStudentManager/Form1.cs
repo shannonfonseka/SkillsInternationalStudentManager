@@ -134,7 +134,7 @@ namespace SkillsInternationalStudentManager
 
         private void menuitemExit_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Close();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

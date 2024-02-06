@@ -10,6 +10,6 @@ namespace SkillsInternationalStudentManager
 
     internal class classPublicVariables
     {
-        public SqlConnection varSqlConnection = new SqlConnection(@"");
+        public static SqlConnection varSqlConnectionString = new SqlConnection(@"Data Source=MARIE-DELL-PC;Initial Catalog=db_SkillsStudentManager;Integrated Security=True;Encrypt=False;Trust Server Certificate=True");
     }
 }

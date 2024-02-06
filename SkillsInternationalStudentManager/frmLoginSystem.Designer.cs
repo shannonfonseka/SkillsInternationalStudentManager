@@ -41,8 +41,13 @@
             lblTitle = new Label();
             toolTip1 = new ToolTip(components);
             flowpanelLoginLayout = new FlowLayoutPanel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            lblAccessType = new Label();
+            radiobtnTeacher = new RadioButton();
+            radiobtnAdmin = new RadioButton();
             btnAboutProgram = new LinkLabel();
             flowpanelLoginLayout.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnExitSystem
@@ -51,7 +56,7 @@
             btnExitSystem.Image = Properties.Resources.cancel;
             btnExitSystem.ImageAlign = ContentAlignment.MiddleLeft;
             btnExitSystem.LinkColor = Color.Blue;
-            btnExitSystem.Location = new Point(333, 453);
+            btnExitSystem.Location = new Point(333, 457);
             btnExitSystem.Margin = new Padding(0, 0, 0, 10);
             btnExitSystem.Name = "btnExitSystem";
             btnExitSystem.Size = new Size(131, 19);
@@ -69,7 +74,7 @@
             btnClearFields.Image = Properties.Resources.textfield_clear;
             btnClearFields.ImageAlign = ContentAlignment.MiddleLeft;
             btnClearFields.LinkColor = Color.Blue;
-            btnClearFields.Location = new Point(358, 395);
+            btnClearFields.Location = new Point(358, 399);
             btnClearFields.Margin = new Padding(0, 0, 0, 10);
             btnClearFields.Name = "btnClearFields";
             btnClearFields.Size = new Size(106, 19);
@@ -79,11 +84,12 @@
             btnClearFields.TextAlign = ContentAlignment.MiddleRight;
             toolTip1.SetToolTip(btnClearFields, "Clears all the data you've entered.");
             btnClearFields.VisitedLinkColor = Color.Blue;
+            btnClearFields.LinkClicked += btnClearFields_LinkClicked;
             // 
             // chkbxShowPassword
             // 
             chkbxShowPassword.AutoSize = true;
-            chkbxShowPassword.Location = new Point(34, 284);
+            chkbxShowPassword.Location = new Point(34, 298);
             chkbxShowPassword.Margin = new Padding(0);
             chkbxShowPassword.Name = "chkbxShowPassword";
             chkbxShowPassword.Size = new Size(148, 19);
@@ -99,8 +105,8 @@
             flowpanelLoginLayout.SetFlowBreak(btnLogin, true);
             btnLogin.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.Image = Properties.Resources.door_in1;
-            btnLogin.Location = new Point(34, 323);
-            btnLogin.Margin = new Padding(0, 20, 0, 30);
+            btnLogin.Location = new Point(34, 337);
+            btnLogin.Margin = new Padding(0, 20, 0, 20);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(118, 42);
             btnLogin.TabIndex = 4;
@@ -113,7 +119,7 @@
             // 
             txtbxPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtbxPassword.Font = new Font("Segoe UI", 9F);
-            txtbxPassword.Location = new Point(34, 256);
+            txtbxPassword.Location = new Point(34, 270);
             txtbxPassword.Margin = new Padding(0, 0, 0, 5);
             txtbxPassword.Name = "txtbxPassword";
             txtbxPassword.PlaceholderText = "required field*";
@@ -125,7 +131,7 @@
             // 
             txtbxUsername.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtbxUsername.Font = new Font("Segoe UI", 9F);
-            txtbxUsername.Location = new Point(34, 193);
+            txtbxUsername.Location = new Point(34, 207);
             txtbxUsername.Margin = new Padding(0, 0, 0, 20);
             txtbxUsername.Name = "txtbxUsername";
             txtbxUsername.PlaceholderText = "required field*";
@@ -136,7 +142,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblPassword.Location = new Point(34, 236);
+            lblPassword.Location = new Point(34, 250);
             lblPassword.Margin = new Padding(0, 0, 0, 5);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(122, 15);
@@ -147,7 +153,7 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblUsername.Location = new Point(34, 173);
+            lblUsername.Location = new Point(34, 187);
             lblUsername.Margin = new Padding(0, 0, 0, 5);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(124, 15);
@@ -158,7 +164,7 @@
             // 
             lblLoginTip.BorderStyle = BorderStyle.Fixed3D;
             lblLoginTip.Location = new Point(34, 84);
-            lblLoginTip.Margin = new Padding(0, 20, 0, 29);
+            lblLoginTip.Margin = new Padding(0, 20, 0, 5);
             lblLoginTip.Name = "lblLoginTip";
             lblLoginTip.Padding = new Padding(5);
             lblLoginTip.Size = new Size(430, 60);
@@ -184,6 +190,7 @@
             flowpanelLoginLayout.BackColor = Color.Transparent;
             flowpanelLoginLayout.Controls.Add(lblTitle);
             flowpanelLoginLayout.Controls.Add(lblLoginTip);
+            flowpanelLoginLayout.Controls.Add(flowLayoutPanel1);
             flowpanelLoginLayout.Controls.Add(lblUsername);
             flowpanelLoginLayout.Controls.Add(txtbxUsername);
             flowpanelLoginLayout.Controls.Add(lblPassword);
@@ -203,13 +210,64 @@
             flowpanelLoginLayout.TabIndex = 7;
             flowpanelLoginLayout.WrapContents = false;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.Controls.Add(lblAccessType);
+            flowLayoutPanel1.Controls.Add(radiobtnTeacher);
+            flowLayoutPanel1.Controls.Add(radiobtnAdmin);
+            flowLayoutPanel1.Location = new Point(34, 152);
+            flowLayoutPanel1.Margin = new Padding(0, 3, 3, 10);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(300, 25);
+            flowLayoutPanel1.TabIndex = 8;
+            // 
+            // lblAccessType
+            // 
+            lblAccessType.AutoSize = true;
+            lblAccessType.Dock = DockStyle.Fill;
+            lblAccessType.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lblAccessType.Location = new Point(0, 0);
+            lblAccessType.Margin = new Padding(0, 0, 0, 5);
+            lblAccessType.Name = "lblAccessType";
+            lblAccessType.Size = new Size(111, 20);
+            lblAccessType.TabIndex = 2;
+            lblAccessType.Text = "Login to system as: ";
+            lblAccessType.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // radiobtnTeacher
+            // 
+            radiobtnTeacher.AutoSize = true;
+            radiobtnTeacher.Cursor = Cursors.Hand;
+            radiobtnTeacher.Location = new Point(121, 3);
+            radiobtnTeacher.Margin = new Padding(10, 3, 3, 3);
+            radiobtnTeacher.Name = "radiobtnTeacher";
+            radiobtnTeacher.Size = new Size(65, 19);
+            radiobtnTeacher.TabIndex = 1;
+            radiobtnTeacher.Text = "Teacher";
+            radiobtnTeacher.UseVisualStyleBackColor = true;
+            radiobtnTeacher.CheckedChanged += radiobtnTeacher_CheckedChanged;
+            // 
+            // radiobtnAdmin
+            // 
+            radiobtnAdmin.AutoSize = true;
+            radiobtnAdmin.Cursor = Cursors.Hand;
+            radiobtnAdmin.Location = new Point(199, 3);
+            radiobtnAdmin.Margin = new Padding(10, 3, 3, 3);
+            radiobtnAdmin.Name = "radiobtnAdmin";
+            radiobtnAdmin.Size = new Size(98, 19);
+            radiobtnAdmin.TabIndex = 0;
+            radiobtnAdmin.Text = "Administrator";
+            radiobtnAdmin.UseVisualStyleBackColor = true;
+            radiobtnAdmin.CheckedChanged += radiobtnAdmin_CheckedChanged;
+            // 
             // btnAboutProgram
             // 
             btnAboutProgram.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAboutProgram.Image = Properties.Resources.information;
             btnAboutProgram.ImageAlign = ContentAlignment.MiddleLeft;
             btnAboutProgram.LinkColor = Color.Blue;
-            btnAboutProgram.Location = new Point(307, 424);
+            btnAboutProgram.Location = new Point(307, 428);
             btnAboutProgram.Margin = new Padding(0, 0, 0, 10);
             btnAboutProgram.Name = "btnAboutProgram";
             btnAboutProgram.Size = new Size(157, 19);
@@ -218,6 +276,7 @@
             btnAboutProgram.Text = "About Student Manager";
             btnAboutProgram.TextAlign = ContentAlignment.MiddleRight;
             btnAboutProgram.VisitedLinkColor = Color.Blue;
+            btnAboutProgram.LinkClicked += btnAboutProgram_LinkClicked;
             // 
             // frmLoginSystem
             // 
@@ -241,6 +300,8 @@
             FormClosing += frmLoginSystem_FormClosing;
             flowpanelLoginLayout.ResumeLayout(false);
             flowpanelLoginLayout.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -258,5 +319,9 @@
         private ToolTip toolTip1;
         private FlowLayoutPanel flowpanelLoginLayout;
         private LinkLabel btnAboutProgram;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private RadioButton radiobtnAdmin;
+        private RadioButton radiobtnTeacher;
+        private Label lblAccessType;
     }
 }
