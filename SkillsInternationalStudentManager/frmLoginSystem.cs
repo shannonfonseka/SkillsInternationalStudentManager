@@ -64,13 +64,18 @@ namespace SkillsInternationalStudentManager
                     {
                         MessageBox.Show("You are now logged as an administrator. You have full access to this system.", "Login information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        Form1.communicator.menuAccessLevel.Text = "ADMIN ACCESS MODE";
+                        Form1.communicator.menuAccessLevel.Text = "Administrator Access Mode";
                     }
                     else
                     {
                         MessageBox.Show("You are now logged as a teacher. You have limited access to this system.", "Login information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        Form1.communicator.menuAccessLevel.Text = "TEACHER ACCESS MODE";
+                        Form1.communicator.menuAccessLevel.Text = "Teacher Access Mode";
+                        Form1.communicator.menuitemAddStudent.Enabled = false;
+                        Form1.communicator.toolbarbtnAddStudent.Enabled = false;
+                        Form1.communicator.toolbarbtnManageStudents.Enabled = false;
+                        Form1.communicator.menuitemManageStudents.Enabled = false;
+                        Form1.communicator.menuitemAttendanceTracking.Enabled = false;
                     }
                     Form1.communicator.Enabled = true;
                     Form1.communicator.toolbarMain.Enabled = true;
@@ -85,7 +90,7 @@ namespace SkillsInternationalStudentManager
                 else
                 {
                     Cursor = Cursors.Default;
-                    MessageBox.Show("Invalid username, password or role selected. Use only the administrator and teacher login credentials only.", "Login attempt error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Invalid username, password or role selected. Use only the administrator and teacher login credentials only.", "Login attempt error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)

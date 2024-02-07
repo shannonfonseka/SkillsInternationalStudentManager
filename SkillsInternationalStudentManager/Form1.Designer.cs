@@ -101,7 +101,7 @@
             menuMain.MdiWindowListItem = menuWindow;
             menuMain.Name = "menuMain";
             menuMain.RenderMode = ToolStripRenderMode.Professional;
-            menuMain.Size = new Size(1096, 24);
+            menuMain.Size = new Size(1104, 24);
             menuMain.TabIndex = 1;
             // 
             // menuFile
@@ -374,7 +374,7 @@
             toolbarMain.Location = new Point(0, 24);
             toolbarMain.Name = "toolbarMain";
             toolbarMain.RenderMode = ToolStripRenderMode.System;
-            toolbarMain.Size = new Size(1096, 54);
+            toolbarMain.Size = new Size(1104, 54);
             toolbarMain.TabIndex = 4;
             // 
             // toolbarbtnManageTeachers
@@ -513,10 +513,10 @@
             panelNoticeBoard.BorderStyle = BorderStyle.Fixed3D;
             panelNoticeBoard.Controls.Add(flowLayoutPanel1);
             panelNoticeBoard.Dock = DockStyle.Right;
-            panelNoticeBoard.Location = new Point(775, 78);
+            panelNoticeBoard.Location = new Point(783, 78);
             panelNoticeBoard.Margin = new Padding(2);
             panelNoticeBoard.Name = "panelNoticeBoard";
-            panelNoticeBoard.Size = new Size(321, 399);
+            panelNoticeBoard.Size = new Size(321, 383);
             panelNoticeBoard.TabIndex = 6;
             panelNoticeBoard.Visible = false;
             // 
@@ -531,7 +531,7 @@
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Margin = new Padding(2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(317, 395);
+            flowLayoutPanel1.Size = new Size(317, 379);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.WrapContents = false;
             // 
@@ -551,22 +551,23 @@
             picbxNoticeBoardImg.Image = Properties.Resources.notes_bg;
             picbxNoticeBoardImg.Location = new Point(2, 43);
             picbxNoticeBoardImg.Margin = new Padding(2);
-            picbxNoticeBoardImg.MaximumSize = new Size(320, 173);
-            picbxNoticeBoardImg.MinimumSize = new Size(320, 173);
+            picbxNoticeBoardImg.MaximumSize = new Size(310, 170);
+            picbxNoticeBoardImg.MinimumSize = new Size(310, 170);
             picbxNoticeBoardImg.Name = "picbxNoticeBoardImg";
-            picbxNoticeBoardImg.Size = new Size(320, 173);
+            picbxNoticeBoardImg.Size = new Size(310, 170);
             picbxNoticeBoardImg.SizeMode = PictureBoxSizeMode.Zoom;
             picbxNoticeBoardImg.TabIndex = 1;
             picbxNoticeBoardImg.TabStop = false;
             // 
             // lblNoticeBoardDesc
             // 
-            lblNoticeBoardDesc.AutoSize = true;
             lblNoticeBoardDesc.BorderStyle = BorderStyle.Fixed3D;
-            lblNoticeBoardDesc.Location = new Point(2, 222);
-            lblNoticeBoardDesc.Margin = new Padding(2, 4, 2, 4);
+            lblNoticeBoardDesc.Location = new Point(0, 215);
+            lblNoticeBoardDesc.Margin = new Padding(0);
+            lblNoticeBoardDesc.MaximumSize = new Size(300, 50);
+            lblNoticeBoardDesc.MinimumSize = new Size(300, 50);
             lblNoticeBoardDesc.Name = "lblNoticeBoardDesc";
-            lblNoticeBoardDesc.Size = new Size(318, 47);
+            lblNoticeBoardDesc.Size = new Size(300, 50);
             lblNoticeBoardDesc.TabIndex = 2;
             lblNoticeBoardDesc.Text = "Events and important messages about the school, will be listed here. Check for automated messages or create a new messages.";
             // 
@@ -574,7 +575,7 @@
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(1096, 477);
+            ClientSize = new Size(1104, 461);
             Controls.Add(panelNoticeBoard);
             Controls.Add(toolbarMain);
             Controls.Add(menuMain);

@@ -10,8 +10,8 @@ namespace SkillsInternationalStudentManager
         public Form1()
         {
             InitializeComponent();
-            MinimumSize = new Size(1200, 800);
-            Size = new Size(1200, 800);
+            MinimumSize = new Size(1000, 600);
+            Size = new Size(1000, 600);
             foreach (ToolStripItem tsi in toolbarMain.Items)
             {
                 tsi.Text = tsi.Text.Replace("|", Environment.NewLine);
