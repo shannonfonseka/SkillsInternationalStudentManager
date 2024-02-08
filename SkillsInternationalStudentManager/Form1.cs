@@ -4,9 +4,11 @@ namespace SkillsInternationalStudentManager
     {
         public static Form1? communicator;
         public bool varIsManageStudentsWindowOpen = false;
-        frmStudentsManager varFrmStudentsManager = new frmStudentsManager();
+        Form varFrmStudentsManager = new frmStudentsManager();
         public bool varIsCreateStudentsWindowOpen = false;
-        frmCreateStudent varFrmCreateStudent = new frmCreateStudent();
+        Form varFrmCreateStudent = new frmCreateStudent();
+        public bool varIsManageTeachersWindowOpen = false;
+        Form varFrmManageTeachers = new frmManageTeachers();
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace SkillsInternationalStudentManager
             toolbarMain.Enabled = false;
             toolbarbtnNoticeBoard.Checked = false;
             menuMain.Enabled = false;
-            frmLoginSystem varFrmLoginSystem = new frmLoginSystem();
+            Form varFrmLoginSystem = new frmLoginSystem();
             varFrmLoginSystem.ShowDialog();
         }
         private void procedureLogOut()
@@ -54,7 +56,7 @@ namespace SkillsInternationalStudentManager
             }
         }
 
-        private void procedureShowManageStudentsWindow()
+        public void procedureShowManageStudentsWindow()
         {
             if (varFrmStudentsManager.WindowState == FormWindowState.Normal)
             {
@@ -75,7 +77,7 @@ namespace SkillsInternationalStudentManager
             toolbarbtnManageStudents.Checked = true;
             varFrmStudentsManager.Focus();
         }
-        private void procedureShowCreateStudentWindow()
+        public void procedureShowCreateStudentWindow()
         {
             if (varFrmCreateStudent.WindowState == FormWindowState.Normal)
             {
@@ -116,6 +118,28 @@ namespace SkillsInternationalStudentManager
         public void procedureShowAboutProgramMessageBox()
         {
             MessageBox.Show("Skills International Student Manager (SISM)" + Environment.NewLine + "Version 01.01" + Environment.NewLine + Environment.NewLine + "(C) 2024 Shannon Fonseka. Made for ESOFT DiTech Final Project.", "About this program");
+        }
+
+        public void procedureShowManageTeachersWindow()
+        {
+            if (varFrmManageTeachers.WindowState == FormWindowState.Normal)
+            {
+                varFrmManageTeachers.WindowState = FormWindowState.Minimized;
+            }
+            else
+            {
+                varFrmManageTeachers.WindowState = FormWindowState.Normal;
+            }
+            if (varIsManageTeachersWindowOpen == false)
+            {
+                varFrmManageTeachers = new frmManageTeachers();
+                varFrmManageTeachers.MdiParent = this;
+                varFrmManageTeachers.Show();
+                varFrmManageTeachers.Focus();
+                varIsManageTeachersWindowOpen = true;
+            }
+            toolbarbtnManageTeachers.Checked = true;
+            varFrmManageTeachers.Focus();
         }
         private void menuitemLogOutSystem_Click(object sender, EventArgs e)
         {
@@ -168,6 +192,11 @@ namespace SkillsInternationalStudentManager
         {
             procedureShowOrHideNoticeBoard();
 
+        }
+
+        private void toolbarbtnManageTeachers_Click(object sender, EventArgs e)
+        {
+            procedureShowManageTeachersWindow();
         }
     }
 }

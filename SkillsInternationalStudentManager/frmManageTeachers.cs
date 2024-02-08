@@ -16,5 +16,11 @@ namespace SkillsInternationalStudentManager
         {
             InitializeComponent();
         }
+
+        private void frmManageTeachers_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1.communicator.varIsManageTeachersWindowOpen = false;
+            Form1.communicator.toolbarbtnManageTeachers.Checked = false;
+        }
     }
 }

@@ -387,6 +387,7 @@
             toolbarbtnManageTeachers.Text = "Manage|Teachers";
             toolbarbtnManageTeachers.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnManageTeachers.ToolTipText = "Edit and manage teachers.";
+            toolbarbtnManageTeachers.Click += toolbarbtnManageTeachers_Click;
             // 
             // toolbarbtnManageTimetables
             // 

@@ -281,6 +281,7 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.Manual;
             Text = "Teacher Manager window";
+            FormClosing += frmManageTeachers_FormClosing;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);

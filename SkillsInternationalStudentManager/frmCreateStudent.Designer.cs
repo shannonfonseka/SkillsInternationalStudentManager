@@ -31,8 +31,8 @@
             splitContainer1 = new SplitContainer();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
-            linkLabel3 = new LinkLabel();
-            linkLabel4 = new LinkLabel();
+            btnManageStudents = new LinkLabel();
+            btnManageParents = new LinkLabel();
             pictureBox1 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label2 = new Label();
@@ -105,8 +105,8 @@
             // 
             flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.Controls.Add(label1);
-            flowLayoutPanel1.Controls.Add(linkLabel3);
-            flowLayoutPanel1.Controls.Add(linkLabel4);
+            flowLayoutPanel1.Controls.Add(btnManageStudents);
+            flowLayoutPanel1.Controls.Add(btnManageParents);
             flowLayoutPanel1.Dock = DockStyle.Top;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
@@ -127,27 +127,27 @@
             label1.TabIndex = 3;
             label1.Text = "Common tasks";
             // 
-            // linkLabel3
+            // btnManageStudents
             // 
-            linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(2, 43);
-            linkLabel3.Margin = new Padding(2, 0, 2, 12);
-            linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(98, 15);
-            linkLabel3.TabIndex = 15;
-            linkLabel3.TabStop = true;
-            linkLabel3.Text = "Manage students";
+            btnManageStudents.AutoSize = true;
+            btnManageStudents.Location = new Point(2, 43);
+            btnManageStudents.Margin = new Padding(2, 0, 2, 12);
+            btnManageStudents.Name = "btnManageStudents";
+            btnManageStudents.Size = new Size(98, 15);
+            btnManageStudents.TabIndex = 15;
+            btnManageStudents.TabStop = true;
+            btnManageStudents.Text = "Manage students";
             // 
-            // linkLabel4
+            // btnManageParents
             // 
-            linkLabel4.AutoSize = true;
-            linkLabel4.Location = new Point(2, 70);
-            linkLabel4.Margin = new Padding(2, 0, 2, 12);
-            linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(149, 15);
-            linkLabel4.TabIndex = 16;
-            linkLabel4.TabStop = true;
-            linkLabel4.Text = "Manage parents/guardians";
+            btnManageParents.AutoSize = true;
+            btnManageParents.Location = new Point(2, 70);
+            btnManageParents.Margin = new Padding(2, 0, 2, 12);
+            btnManageParents.Name = "btnManageParents";
+            btnManageParents.Size = new Size(149, 15);
+            btnManageParents.TabIndex = 16;
+            btnManageParents.TabStop = true;
+            btnManageParents.Text = "Manage parents/guardians";
             // 
             // pictureBox1
             // 
@@ -498,6 +498,7 @@
             btnAddStudent.TextAlign = ContentAlignment.MiddleRight;
             btnAddStudent.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAddStudent.UseVisualStyleBackColor = true;
+            btnAddStudent.Click += btnAddStudent_Click;
             // 
             // frmCreateStudent
             // 
@@ -537,9 +538,9 @@
         private SplitContainer splitContainer1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
-        private LinkLabel linkLabel3;
+        private LinkLabel btnManageStudents;
         private PictureBox pictureBox1;
-        private LinkLabel linkLabel4;
+        private LinkLabel btnManageParents;
         private FlowLayoutPanel flowLayoutPanel2;
         private Label label2;
         private TableLayoutPanel tableLayoutPanel1;

@@ -27,6 +27,10 @@ namespace SkillsInternationalStudentManager
             Form1.communicator.varIsCreateStudentsWindowOpen = false;
             Form1.communicator.toolbarbtnAddStudent.Checked = false;
         }
-        
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

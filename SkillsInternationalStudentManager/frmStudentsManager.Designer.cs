@@ -31,19 +31,19 @@
             splitContainer1 = new SplitContainer();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
-            linkLabel1 = new LinkLabel();
-            linkLabel3 = new LinkLabel();
-            linkLabel4 = new LinkLabel();
+            btnRefreshDB = new LinkLabel();
+            btnManageTeachers = new LinkLabel();
+            btnManageParents = new LinkLabel();
             pictureBox1 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label2 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            button4 = new Button();
-            button1 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            checkedListBox1 = new CheckedListBox();
             label3 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            btnAddStudent = new Button();
+            btnEditStudent = new Button();
+            btnPrintList = new Button();
+            btnRemoveStudent = new Button();
+            lstbxStudents = new ListBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -82,9 +82,9 @@
             // 
             flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.Controls.Add(label1);
-            flowLayoutPanel1.Controls.Add(linkLabel1);
-            flowLayoutPanel1.Controls.Add(linkLabel3);
-            flowLayoutPanel1.Controls.Add(linkLabel4);
+            flowLayoutPanel1.Controls.Add(btnRefreshDB);
+            flowLayoutPanel1.Controls.Add(btnManageTeachers);
+            flowLayoutPanel1.Controls.Add(btnManageParents);
             flowLayoutPanel1.Dock = DockStyle.Top;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
@@ -105,38 +105,38 @@
             label1.TabIndex = 3;
             label1.Text = "Common tasks";
             // 
-            // linkLabel1
+            // btnRefreshDB
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(2, 43);
-            linkLabel1.Margin = new Padding(2, 0, 2, 12);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(96, 15);
-            linkLabel1.TabIndex = 0;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Refresh database";
+            btnRefreshDB.AutoSize = true;
+            btnRefreshDB.Location = new Point(2, 43);
+            btnRefreshDB.Margin = new Padding(2, 0, 2, 12);
+            btnRefreshDB.Name = "btnRefreshDB";
+            btnRefreshDB.Size = new Size(96, 15);
+            btnRefreshDB.TabIndex = 0;
+            btnRefreshDB.TabStop = true;
+            btnRefreshDB.Text = "Refresh database";
             // 
-            // linkLabel3
+            // btnManageTeachers
             // 
-            linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(2, 70);
-            linkLabel3.Margin = new Padding(2, 0, 2, 12);
-            linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(97, 15);
-            linkLabel3.TabIndex = 2;
-            linkLabel3.TabStop = true;
-            linkLabel3.Text = "Manage teachers";
+            btnManageTeachers.AutoSize = true;
+            btnManageTeachers.Location = new Point(2, 70);
+            btnManageTeachers.Margin = new Padding(2, 0, 2, 12);
+            btnManageTeachers.Name = "btnManageTeachers";
+            btnManageTeachers.Size = new Size(97, 15);
+            btnManageTeachers.TabIndex = 2;
+            btnManageTeachers.TabStop = true;
+            btnManageTeachers.Text = "Manage teachers";
             // 
-            // linkLabel4
+            // btnManageParents
             // 
-            linkLabel4.AutoSize = true;
-            linkLabel4.Location = new Point(2, 97);
-            linkLabel4.Margin = new Padding(2, 0, 2, 12);
-            linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(149, 15);
-            linkLabel4.TabIndex = 4;
-            linkLabel4.TabStop = true;
-            linkLabel4.Text = "Manage parents/guardians";
+            btnManageParents.AutoSize = true;
+            btnManageParents.Location = new Point(2, 97);
+            btnManageParents.Margin = new Padding(2, 0, 2, 12);
+            btnManageParents.Name = "btnManageParents";
+            btnManageParents.Size = new Size(149, 15);
+            btnManageParents.TabIndex = 4;
+            btnManageParents.TabStop = true;
+            btnManageParents.Text = "Manage parents/guardians";
             // 
             // pictureBox1
             // 
@@ -156,7 +156,7 @@
             flowLayoutPanel2.Controls.Add(label2);
             flowLayoutPanel2.Controls.Add(label3);
             flowLayoutPanel2.Controls.Add(tableLayoutPanel1);
-            flowLayoutPanel2.Controls.Add(checkedListBox1);
+            flowLayoutPanel2.Controls.Add(lstbxStudents);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(0, 0);
@@ -177,87 +177,6 @@
             label2.TabIndex = 4;
             label2.Text = "Manage students";
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.BackColor = SystemColors.ActiveCaption;
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.Controls.Add(button4, 0, 0);
-            tableLayoutPanel1.Controls.Add(button1, 1, 0);
-            tableLayoutPanel1.Controls.Add(button3, 3, 0);
-            tableLayoutPanel1.Controls.Add(button2, 2, 0);
-            tableLayoutPanel1.Location = new Point(8, 59);
-            tableLayoutPanel1.Margin = new Padding(8, 8, 8, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(580, 28);
-            tableLayoutPanel1.TabIndex = 2;
-            // 
-            // button4
-            // 
-            button4.Image = Properties.Resources.plus;
-            button4.Location = new Point(2, 2);
-            button4.Margin = new Padding(2);
-            button4.Name = "button4";
-            button4.Size = new Size(106, 23);
-            button4.TabIndex = 3;
-            button4.Text = "Add students";
-            button4.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Enabled = false;
-            button1.Image = Properties.Resources.pencil;
-            button1.Location = new Point(112, 2);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(110, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Edit student";
-            button1.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Enabled = false;
-            button3.Image = Properties.Resources.printer;
-            button3.Location = new Point(360, 2);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(85, 23);
-            button3.TabIndex = 2;
-            button3.Text = "Print list";
-            button3.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Enabled = false;
-            button2.Image = Properties.Resources.cross;
-            button2.Location = new Point(226, 2);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(130, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Remove student";
-            button2.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox1
-            // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(8, 95);
-            checkedListBox1.Margin = new Padding(8);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.ScrollAlwaysVisible = true;
-            checkedListBox1.Size = new Size(584, 382);
-            checkedListBox1.TabIndex = 3;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -267,6 +186,89 @@
             label3.Size = new Size(453, 15);
             label3.TabIndex = 5;
             label3.Text = "Add, edit or manage students on this page. Administrators can access these features.";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.BackColor = SystemColors.ActiveCaption;
+            tableLayoutPanel1.ColumnCount = 4;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.Controls.Add(btnAddStudent, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnEditStudent, 1, 0);
+            tableLayoutPanel1.Controls.Add(btnPrintList, 3, 0);
+            tableLayoutPanel1.Controls.Add(btnRemoveStudent, 2, 0);
+            tableLayoutPanel1.Location = new Point(8, 59);
+            tableLayoutPanel1.Margin = new Padding(8, 8, 8, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(580, 28);
+            tableLayoutPanel1.TabIndex = 2;
+            // 
+            // btnAddStudent
+            // 
+            btnAddStudent.Image = Properties.Resources.plus;
+            btnAddStudent.Location = new Point(2, 2);
+            btnAddStudent.Margin = new Padding(2);
+            btnAddStudent.Name = "btnAddStudent";
+            btnAddStudent.Size = new Size(106, 23);
+            btnAddStudent.TabIndex = 1;
+            btnAddStudent.Text = "Add student";
+            btnAddStudent.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnAddStudent.UseVisualStyleBackColor = true;
+            btnAddStudent.Click += btnAddStudent_Click;
+            // 
+            // btnEditStudent
+            // 
+            btnEditStudent.Enabled = false;
+            btnEditStudent.Image = Properties.Resources.pencil;
+            btnEditStudent.Location = new Point(112, 2);
+            btnEditStudent.Margin = new Padding(2);
+            btnEditStudent.Name = "btnEditStudent";
+            btnEditStudent.Size = new Size(110, 23);
+            btnEditStudent.TabIndex = 2;
+            btnEditStudent.Text = "Edit student";
+            btnEditStudent.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnEditStudent.UseVisualStyleBackColor = true;
+            // 
+            // btnPrintList
+            // 
+            btnPrintList.Enabled = false;
+            btnPrintList.Image = Properties.Resources.printer;
+            btnPrintList.Location = new Point(360, 2);
+            btnPrintList.Margin = new Padding(2);
+            btnPrintList.Name = "btnPrintList";
+            btnPrintList.Size = new Size(85, 23);
+            btnPrintList.TabIndex = 4;
+            btnPrintList.Text = "Print list";
+            btnPrintList.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnPrintList.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveStudent
+            // 
+            btnRemoveStudent.Enabled = false;
+            btnRemoveStudent.Image = Properties.Resources.cross;
+            btnRemoveStudent.Location = new Point(226, 2);
+            btnRemoveStudent.Margin = new Padding(2);
+            btnRemoveStudent.Name = "btnRemoveStudent";
+            btnRemoveStudent.Size = new Size(130, 23);
+            btnRemoveStudent.TabIndex = 3;
+            btnRemoveStudent.Text = "Remove student";
+            btnRemoveStudent.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnRemoveStudent.UseVisualStyleBackColor = true;
+            // 
+            // lstbxStudents
+            // 
+            lstbxStudents.FormattingEnabled = true;
+            lstbxStudents.ItemHeight = 15;
+            lstbxStudents.Location = new Point(10, 97);
+            lstbxStudents.Margin = new Padding(10, 10, 3, 3);
+            lstbxStudents.Name = "lstbxStudents";
+            lstbxStudents.ScrollAlwaysVisible = true;
+            lstbxStudents.Size = new Size(574, 379);
+            lstbxStudents.TabIndex = 5;
             // 
             // frmStudentsManager
             // 
@@ -302,18 +304,18 @@
         private SplitContainer splitContainer1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
-        private LinkLabel linkLabel1;
-        private LinkLabel linkLabel3;
+        private LinkLabel btnRefreshDB;
+        private LinkLabel btnManageTeachers;
         private PictureBox pictureBox1;
-        private LinkLabel linkLabel4;
+        private LinkLabel btnManageParents;
         private FlowLayoutPanel flowLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private CheckedListBox checkedListBox1;
+        private Button btnEditStudent;
+        private Button btnRemoveStudent;
+        private Button btnPrintList;
+        private Button btnAddStudent;
         private Label label2;
         private Label label3;
+        private ListBox lstbxStudents;
     }
 }

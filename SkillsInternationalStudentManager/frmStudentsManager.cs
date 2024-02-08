@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SkillsInternationalStudentManager
+﻿namespace SkillsInternationalStudentManager
 {
     public partial class frmStudentsManager : Form
     {
@@ -26,6 +16,11 @@ namespace SkillsInternationalStudentManager
         {
             Form1.communicator.varIsManageStudentsWindowOpen = false;
             Form1.communicator.toolbarbtnManageStudents.Checked = false;
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            Form1.communicator.procedureShowCreateStudentWindow();
         }
     }
 }
