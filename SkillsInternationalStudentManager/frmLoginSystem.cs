@@ -10,7 +10,7 @@ namespace SkillsInternationalStudentManager
         {
             InitializeComponent();
             radiobtnTeacher.Checked = true;
-            Form1.communicator.menuAccessLevel.Text= "Undefined Access Level";
+            Form1.communicator.menuAccessLevel.Text = "Undefined Access Level";
         }
 
         private void btnExitSystem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -49,11 +49,11 @@ namespace SkillsInternationalStudentManager
                 SqlDataAdapter varSqlAdapter = null;
                 if (radiobtnAdmin.Checked)
                 {
-                    varSqlAdapter = new SqlDataAdapter("SELECT COUNT(*) FROM tb_AdminLogin WHERE Username='" + txtbxUsername.Text + "' AND Password='" + txtbxPassword.Text + "' AND IsAdminRole=1;", classPublicVariables.varSqlConnectionString);  
+                    varSqlAdapter = new SqlDataAdapter("SELECT COUNT(*) FROM tb_AdminLogin WHERE Username='" + txtbxUsername.Text + "' AND Password='" + txtbxPassword.Text + "' AND IsAdminRole=1;", classPublicVariables.varSqlConnectionString);
                 }
                 else
                 {
-                    varSqlAdapter = new SqlDataAdapter("SELECT COUNT(*) FROM tb_AdminLogin WHERE Username='" + txtbxUsername.Text + "' AND Password='" + txtbxPassword.Text + "' AND IsAdminRole=0;", classPublicVariables.varSqlConnectionString);  
+                    varSqlAdapter = new SqlDataAdapter("SELECT COUNT(*) FROM tb_AdminLogin WHERE Username='" + txtbxUsername.Text + "' AND Password='" + txtbxPassword.Text + "' AND IsAdminRole=0;", classPublicVariables.varSqlConnectionString);
                 }
                 DataTable arrayDataTable = new DataTable();
                 varSqlAdapter.Fill(arrayDataTable);
@@ -84,8 +84,8 @@ namespace SkillsInternationalStudentManager
                     Form1.communicator.toolbarbtnNoticeBoard.Checked = true;
                     Form1.communicator.menuitemNoticeBoard.Checked = true;
                     Form1.communicator.panelNoticeBoard.Visible = true;
-                    varIsLoggedInSuccessfully = true;                    
-                        Close();
+                    varIsLoggedInSuccessfully = true;
+                    Close();
                 }
                 else
                 {
@@ -128,7 +128,7 @@ namespace SkillsInternationalStudentManager
 
         private void btnAboutProgram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Skills International Student Manager (SISM)"+Environment.NewLine+"Version 01.01"+Environment.NewLine+Environment.NewLine+"(C) 2024 Shannon Fonseka. Made for ESOFT Final Project.","About this program");
+            MessageBox.Show("Skills International Student Manager (SISM)" + Environment.NewLine + "Version 01.01" + Environment.NewLine + Environment.NewLine + "(C) 2024 Shannon Fonseka. Made for ESOFT Final Project.", "About this program");            
         }
     }
 }

@@ -36,6 +36,7 @@
             pictureBox1 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label2 = new Label();
+            label16 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             label3 = new Label();
             label4 = new Label();
@@ -49,21 +50,21 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
-            label15 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            label16 = new Label();
+            txtbxRegNo = new TextBox();
+            txtbxFName = new TextBox();
+            txtbxLName = new TextBox();
+            txtbxAddress = new TextBox();
+            txtbxEmail = new TextBox();
+            txtbxMPhone = new TextBox();
+            txtbxHPhone = new TextBox();
+            txtbxParentName = new TextBox();
+            txtbxParentNIC = new TextBox();
+            txtbxParentPhone = new TextBox();
+            flowLayoutPanel3 = new FlowLayoutPanel();
+            radiobtnMale = new RadioButton();
+            radiobtnFemale = new RadioButton();
+            btnAddStudent = new Button();
+            dtpDOB = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            flowLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -162,10 +164,12 @@
             // 
             // flowLayoutPanel2
             // 
+            flowLayoutPanel2.AutoScroll = true;
             flowLayoutPanel2.AutoSize = true;
             flowLayoutPanel2.Controls.Add(label2);
             flowLayoutPanel2.Controls.Add(label16);
             flowLayoutPanel2.Controls.Add(tableLayoutPanel1);
+            flowLayoutPanel2.Controls.Add(btnAddStudent);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(0, 0);
@@ -185,6 +189,16 @@
             label2.TabIndex = 1;
             label2.Text = "Create a new student";
             // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(10, 36);
+            label16.Margin = new Padding(10, 5, 3, 10);
+            label16.Name = "label16";
+            label16.Size = new Size(367, 15);
+            label16.TabIndex = 2;
+            label16.Text = "Add students on this page. Administrators can access these features.";
+            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
@@ -202,38 +216,35 @@
             tableLayoutPanel1.Controls.Add(label12, 0, 9);
             tableLayoutPanel1.Controls.Add(label13, 0, 10);
             tableLayoutPanel1.Controls.Add(label14, 0, 11);
-            tableLayoutPanel1.Controls.Add(label15, 0, 12);
-            tableLayoutPanel1.Controls.Add(textBox1, 1, 0);
-            tableLayoutPanel1.Controls.Add(textBox2, 1, 1);
-            tableLayoutPanel1.Controls.Add(textBox3, 1, 2);
-            tableLayoutPanel1.Controls.Add(textBox4, 1, 3);
-            tableLayoutPanel1.Controls.Add(textBox5, 1, 4);
-            tableLayoutPanel1.Controls.Add(textBox6, 1, 5);
-            tableLayoutPanel1.Controls.Add(textBox7, 1, 6);
-            tableLayoutPanel1.Controls.Add(textBox8, 1, 7);
-            tableLayoutPanel1.Controls.Add(textBox9, 1, 8);
-            tableLayoutPanel1.Controls.Add(textBox10, 1, 9);
-            tableLayoutPanel1.Controls.Add(textBox11, 1, 10);
-            tableLayoutPanel1.Controls.Add(textBox12, 1, 11);
-            tableLayoutPanel1.Controls.Add(textBox13, 1, 12);
-            tableLayoutPanel1.Location = new Point(3, 61);
-            tableLayoutPanel1.Margin = new Padding(3, 10, 3, 3);
+            tableLayoutPanel1.Controls.Add(txtbxRegNo, 1, 0);
+            tableLayoutPanel1.Controls.Add(txtbxFName, 1, 1);
+            tableLayoutPanel1.Controls.Add(txtbxLName, 1, 2);
+            tableLayoutPanel1.Controls.Add(txtbxAddress, 1, 5);
+            tableLayoutPanel1.Controls.Add(txtbxEmail, 1, 6);
+            tableLayoutPanel1.Controls.Add(txtbxMPhone, 1, 7);
+            tableLayoutPanel1.Controls.Add(txtbxHPhone, 1, 8);
+            tableLayoutPanel1.Controls.Add(txtbxParentName, 1, 9);
+            tableLayoutPanel1.Controls.Add(txtbxParentNIC, 1, 10);
+            tableLayoutPanel1.Controls.Add(txtbxParentPhone, 1, 11);
+            tableLayoutPanel1.Controls.Add(flowLayoutPanel3, 1, 4);
+            tableLayoutPanel1.Controls.Add(dtpDOB, 1, 3);
+            tableLayoutPanel1.Location = new Point(10, 71);
+            tableLayoutPanel1.Margin = new Padding(10, 10, 3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 13;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 7.69230843F));
-            tableLayoutPanel1.Size = new Size(469, 382);
+            tableLayoutPanel1.RowCount = 12;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333333F));
+            tableLayoutPanel1.Size = new Size(525, 505);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label3
@@ -241,218 +252,252 @@
             label3.AutoSize = true;
             label3.Location = new Point(3, 0);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Padding = new Padding(0, 0, 10, 0);
+            label3.Size = new Size(125, 15);
             label3.TabIndex = 0;
-            label3.Text = "label3";
+            label3.Text = "Registration number";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(3, 29);
+            label4.Location = new Point(3, 42);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(62, 15);
             label4.TabIndex = 1;
-            label4.Text = "label4";
+            label4.Text = "First name";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 58);
+            label5.Location = new Point(3, 84);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(61, 15);
             label5.TabIndex = 2;
-            label5.Text = "label5";
+            label5.Text = "Last name";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(3, 87);
+            label6.Location = new Point(3, 126);
             label6.Name = "label6";
-            label6.Size = new Size(38, 15);
+            label6.Size = new Size(73, 15);
             label6.TabIndex = 3;
-            label6.Text = "label6";
+            label6.Text = "Date of birth";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(3, 116);
+            label7.Location = new Point(3, 168);
             label7.Name = "label7";
-            label7.Size = new Size(38, 15);
+            label7.Size = new Size(45, 15);
             label7.TabIndex = 4;
-            label7.Text = "label7";
+            label7.Text = "Gender";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(3, 145);
+            label8.Location = new Point(3, 210);
             label8.Name = "label8";
-            label8.Size = new Size(38, 15);
+            label8.Size = new Size(49, 15);
             label8.TabIndex = 5;
-            label8.Text = "label8";
+            label8.Text = "Address";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(3, 174);
+            label9.Location = new Point(3, 252);
             label9.Name = "label9";
-            label9.Size = new Size(38, 15);
+            label9.Size = new Size(36, 15);
             label9.TabIndex = 6;
-            label9.Text = "label9";
+            label9.Text = "Email";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(3, 203);
+            label10.Location = new Point(3, 294);
             label10.Name = "label10";
-            label10.Size = new Size(44, 15);
+            label10.Size = new Size(81, 15);
             label10.TabIndex = 7;
-            label10.Text = "label10";
+            label10.Text = "Mobile phone";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(3, 232);
+            label11.Location = new Point(3, 336);
             label11.Name = "label11";
-            label11.Size = new Size(44, 15);
+            label11.Size = new Size(77, 15);
             label11.TabIndex = 8;
-            label11.Text = "label11";
+            label11.Text = "Home phone";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(3, 261);
+            label12.Location = new Point(3, 378);
             label12.Name = "label12";
-            label12.Size = new Size(44, 15);
+            label12.Size = new Size(82, 15);
             label12.TabIndex = 9;
-            label12.Text = "label12";
+            label12.Text = "Parent's name";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(3, 290);
+            label13.Location = new Point(3, 420);
             label13.Name = "label13";
-            label13.Size = new Size(44, 15);
+            label13.Size = new Size(72, 15);
             label13.TabIndex = 10;
-            label13.Text = "label13";
+            label13.Text = "Parent's NIC";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(3, 319);
+            label14.Location = new Point(3, 462);
             label14.Name = "label14";
-            label14.Size = new Size(44, 15);
+            label14.Size = new Size(109, 15);
             label14.TabIndex = 11;
-            label14.Text = "label14";
+            label14.Text = "Parent's contact no";
             // 
-            // label15
+            // txtbxRegNo
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(3, 348);
-            label15.Name = "label15";
-            label15.Size = new Size(44, 15);
-            label15.TabIndex = 12;
-            label15.Text = "label15";
+            txtbxRegNo.Location = new Point(134, 3);
+            txtbxRegNo.MaxLength = 4;
+            txtbxRegNo.Name = "txtbxRegNo";
+            txtbxRegNo.PlaceholderText = "*required";
+            txtbxRegNo.Size = new Size(100, 23);
+            txtbxRegNo.TabIndex = 13;
             // 
-            // textBox1
+            // txtbxFName
             // 
-            textBox1.Location = new Point(53, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 13;
+            txtbxFName.Location = new Point(134, 45);
+            txtbxFName.MaxLength = 50;
+            txtbxFName.Name = "txtbxFName";
+            txtbxFName.PlaceholderText = "*required";
+            txtbxFName.Size = new Size(348, 23);
+            txtbxFName.TabIndex = 14;
             // 
-            // textBox2
+            // txtbxLName
             // 
-            textBox2.Location = new Point(53, 32);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 14;
+            txtbxLName.Location = new Point(134, 87);
+            txtbxLName.MaxLength = 50;
+            txtbxLName.Name = "txtbxLName";
+            txtbxLName.PlaceholderText = "*required";
+            txtbxLName.Size = new Size(348, 23);
+            txtbxLName.TabIndex = 15;
             // 
-            // textBox3
+            // txtbxAddress
             // 
-            textBox3.Location = new Point(53, 61);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 15;
+            txtbxAddress.Location = new Point(134, 213);
+            txtbxAddress.MaxLength = 200;
+            txtbxAddress.Multiline = true;
+            txtbxAddress.Name = "txtbxAddress";
+            txtbxAddress.PlaceholderText = "*required";
+            txtbxAddress.Size = new Size(348, 30);
+            txtbxAddress.TabIndex = 18;
             // 
-            // textBox4
+            // txtbxEmail
             // 
-            textBox4.Location = new Point(53, 90);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 16;
+            txtbxEmail.Location = new Point(134, 255);
+            txtbxEmail.MaxLength = 50;
+            txtbxEmail.Name = "txtbxEmail";
+            txtbxEmail.Size = new Size(348, 23);
+            txtbxEmail.TabIndex = 19;
             // 
-            // textBox5
+            // txtbxMPhone
             // 
-            textBox5.Location = new Point(53, 119);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 17;
+            txtbxMPhone.Location = new Point(134, 297);
+            txtbxMPhone.MaxLength = 10;
+            txtbxMPhone.Name = "txtbxMPhone";
+            txtbxMPhone.PlaceholderText = "*required";
+            txtbxMPhone.Size = new Size(348, 23);
+            txtbxMPhone.TabIndex = 20;
             // 
-            // textBox6
+            // txtbxHPhone
             // 
-            textBox6.Location = new Point(53, 148);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 18;
+            txtbxHPhone.Location = new Point(134, 339);
+            txtbxHPhone.MaxLength = 10;
+            txtbxHPhone.Name = "txtbxHPhone";
+            txtbxHPhone.PlaceholderText = "*required";
+            txtbxHPhone.Size = new Size(348, 23);
+            txtbxHPhone.TabIndex = 21;
             // 
-            // textBox7
+            // txtbxParentName
             // 
-            textBox7.Location = new Point(53, 177);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 19;
+            txtbxParentName.Location = new Point(134, 381);
+            txtbxParentName.MaxLength = 50;
+            txtbxParentName.Name = "txtbxParentName";
+            txtbxParentName.PlaceholderText = "*required";
+            txtbxParentName.Size = new Size(348, 23);
+            txtbxParentName.TabIndex = 22;
             // 
-            // textBox8
+            // txtbxParentNIC
             // 
-            textBox8.Location = new Point(53, 206);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 23);
-            textBox8.TabIndex = 20;
+            txtbxParentNIC.Location = new Point(134, 423);
+            txtbxParentNIC.MaxLength = 50;
+            txtbxParentNIC.Name = "txtbxParentNIC";
+            txtbxParentNIC.PlaceholderText = "*required";
+            txtbxParentNIC.Size = new Size(348, 23);
+            txtbxParentNIC.TabIndex = 23;
             // 
-            // textBox9
+            // txtbxParentPhone
             // 
-            textBox9.Location = new Point(53, 235);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 21;
+            txtbxParentPhone.Location = new Point(134, 465);
+            txtbxParentPhone.MaxLength = 50;
+            txtbxParentPhone.Name = "txtbxParentPhone";
+            txtbxParentPhone.PlaceholderText = "*required";
+            txtbxParentPhone.Size = new Size(348, 23);
+            txtbxParentPhone.TabIndex = 24;
             // 
-            // textBox10
+            // flowLayoutPanel3
             // 
-            textBox10.Location = new Point(53, 264);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 23);
-            textBox10.TabIndex = 22;
+            flowLayoutPanel3.Controls.Add(radiobtnMale);
+            flowLayoutPanel3.Controls.Add(radiobtnFemale);
+            flowLayoutPanel3.Location = new Point(134, 171);
+            flowLayoutPanel3.Name = "flowLayoutPanel3";
+            flowLayoutPanel3.Size = new Size(200, 36);
+            flowLayoutPanel3.TabIndex = 26;
             // 
-            // textBox11
+            // radiobtnMale
             // 
-            textBox11.Location = new Point(53, 293);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 23);
-            textBox11.TabIndex = 23;
+            radiobtnMale.AutoSize = true;
+            radiobtnMale.Location = new Point(3, 3);
+            radiobtnMale.Name = "radiobtnMale";
+            radiobtnMale.Size = new Size(51, 19);
+            radiobtnMale.TabIndex = 0;
+            radiobtnMale.TabStop = true;
+            radiobtnMale.Text = "Male";
+            radiobtnMale.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // radiobtnFemale
             // 
-            textBox12.Location = new Point(53, 322);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(100, 23);
-            textBox12.TabIndex = 24;
+            radiobtnFemale.AutoSize = true;
+            radiobtnFemale.Location = new Point(60, 3);
+            radiobtnFemale.Name = "radiobtnFemale";
+            radiobtnFemale.Size = new Size(63, 19);
+            radiobtnFemale.TabIndex = 1;
+            radiobtnFemale.TabStop = true;
+            radiobtnFemale.Text = "Female";
+            radiobtnFemale.UseVisualStyleBackColor = true;
             // 
-            // textBox13
+            // btnAddStudent
             // 
-            textBox13.Location = new Point(53, 351);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(100, 23);
-            textBox13.TabIndex = 25;
+            btnAddStudent.Image = Properties.Resources.user_add;
+            btnAddStudent.Location = new Point(10, 589);
+            btnAddStudent.Margin = new Padding(10, 10, 3, 20);
+            btnAddStudent.Name = "btnAddStudent";
+            btnAddStudent.Size = new Size(142, 29);
+            btnAddStudent.TabIndex = 3;
+            btnAddStudent.Text = "Add this student";
+            btnAddStudent.TextAlign = ContentAlignment.MiddleRight;
+            btnAddStudent.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAddStudent.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // dtpDOB
             // 
-            label16.AutoSize = true;
-            label16.Location = new Point(10, 36);
-            label16.Margin = new Padding(10, 5, 3, 0);
-            label16.Name = "label16";
-            label16.Size = new Size(367, 15);
-            label16.TabIndex = 2;
-            label16.Text = "Add students on this page. Administrators can access these features.";
+            dtpDOB.CustomFormat = "dd-MM-yyyy";
+            dtpDOB.Format = DateTimePickerFormat.Custom;
+            dtpDOB.Location = new Point(134, 129);
+            dtpDOB.Name = "dtpDOB";
+            dtpDOB.Size = new Size(122, 23);
+            dtpDOB.TabIndex = 27;
             // 
             // frmCreateStudent
             // 
@@ -482,6 +527,8 @@
             flowLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            flowLayoutPanel3.ResumeLayout(false);
+            flowLayoutPanel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -508,20 +555,21 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private Label label15;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
+        private TextBox txtbxRegNo;
+        private TextBox txtbxFName;
+        private TextBox txtbxLName;
+        private TextBox txtbxAddress;
+        private TextBox txtbxEmail;
+        private TextBox txtbxMPhone;
+        private TextBox txtbxHPhone;
+        private TextBox txtbxParentName;
+        private TextBox txtbxParentNIC;
+        private TextBox txtbxParentPhone;
         private Label label16;
+        private FlowLayoutPanel flowLayoutPanel3;
+        private RadioButton radiobtnMale;
+        private RadioButton radiobtnFemale;
+        private Button btnAddStudent;
+        private DateTimePicker dtpDOB;
     }
 }
