@@ -128,7 +128,7 @@ namespace SkillsInternationalStudentManager
 
         private void btnAboutProgram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Skills International Student Manager (SISM)" + Environment.NewLine + "Version 01.01" + Environment.NewLine + Environment.NewLine + "(C) 2024 Shannon Fonseka. Made for ESOFT Final Project.", "About this program");            
+            Form1.communicator.procedureShowAboutProgramMessageBox();
         }
     }
 }

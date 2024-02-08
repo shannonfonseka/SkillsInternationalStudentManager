@@ -112,6 +112,11 @@ namespace SkillsInternationalStudentManager
                 menuitemNoticeBoard.Checked = true;
             }
         }
+
+        public void procedureShowAboutProgramMessageBox()
+        {
+            MessageBox.Show("Skills International Student Manager (SISM)" + Environment.NewLine + "Version 01.01" + Environment.NewLine + Environment.NewLine + "(C) 2024 Shannon Fonseka. Made for ESOFT DiTech Final Project.", "About this program");
+        }
         private void menuitemLogOutSystem_Click(object sender, EventArgs e)
         {
             procedureLogOut();
