@@ -30,7 +30,7 @@ namespace SkillsInternationalStudentManager
                     int varRegNo = int.Parse(txtbxRegNo.Text.ToString());
                     string varFirstName = txtbxFName.Text;
                     string varLastName = txtbxLName.Text;
-                    string varDOB = dtpDOB.Value.ToString("dd-MM-yyyy");
+                    string varDOB = dtpDOB.Text;
                     string varGender;
                     if (radiobtnMale.Checked)
                     { varGender = "Male"; }
@@ -60,7 +60,7 @@ namespace SkillsInternationalStudentManager
                    varSqlConnectionString);
                     varSqlConnectionString.Open();
                     varSqlCommand.ExecuteNonQuery();
-                    MessageBox.Show("One record added successfully!", "Database message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("One record added successfully!", "Database operation message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     procedureClearForm();
                 }
                 else
@@ -80,7 +80,6 @@ namespace SkillsInternationalStudentManager
 
         private void procedureClearForm()
         {
-            txtbxRegNo.Clear();
             txtbxFName.Clear();
             txtbxLName.Clear();
             dtpDOB.Value = DateTime.Now;
@@ -90,7 +89,8 @@ namespace SkillsInternationalStudentManager
             txtbxHPhone.Clear();
             txtbxParentName.Clear();
             txtbxParentNIC.Clear();
-            txtbxRegNo.Focus();
+            txtbxParentPhone.Clear();
+            txtbxFName.Focus();
         }
 
         private void btnClearValues_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

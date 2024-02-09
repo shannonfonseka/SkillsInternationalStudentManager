@@ -390,6 +390,7 @@
             btnAddStudent.TextAlign = ContentAlignment.MiddleRight;
             btnAddStudent.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAddStudent.UseVisualStyleBackColor = true;
+            btnAddStudent.Click += btnAddStudent_Click;
             // 
             // btnClearValues
             // 

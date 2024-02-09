@@ -26,21 +26,26 @@ namespace SkillsInternationalStudentManager
                 varSqlAdapter.Fill(arrayDataSet, "tb_StudentRecords");
                 lstbxStudentRegNo.ValueMember = "StudentRegNo";
                 lstbxStudentRegNo.DataSource = arrayDataSet.Tables["tb_StudentRecords"];
-
-                lstbxStudentRegNo.SelectedIndex = 0;
-                btnAddStudent.Enabled = true;
-                btnEditStudent.Enabled = true;
-                btnRemoveStudent.Enabled = true;
-                procedureShowEditStudentsWindow();
+                classPublicVariables.varSqlConnectionString.Close();
+                if (lstbxStudentRegNo.Items.Count == 0)
+                {
+                    btnAddStudent.Enabled = true;
+                    btnEditStudent.Enabled = false;
+                    btnRemoveStudent.Enabled = false;
+                }
+                else
+                {
+                    btnAddStudent.Enabled = true;
+                    btnEditStudent.Enabled = true;
+                    btnRemoveStudent.Enabled = true;
+                }
+                lstbxStudentRegNo.SelectedIndex = 0;                 
             }
             catch (Exception ex)
             {
                 if (!ex.Message.Contains("Value of '0'"))
                 {
-                    MessageBox.Show(ex.Message);
-                    btnAddStudent.Enabled = false;
-                    btnEditStudent.Enabled = false;
-                    btnRemoveStudent.Enabled = false;
+                    MessageBox.Show(ex.Message);                    
                 }
             }
             finally
@@ -80,10 +85,10 @@ namespace SkillsInternationalStudentManager
 
         private void lstbxStudentRegNo_DoubleClick(object sender, EventArgs e)
         {
-            try
-            { procedureShowEditStudentsWindow(); }
-            catch
-            { }
+            if (lstbxStudentRegNo.Items.Count !=0)
+            {
+                procedureShowEditStudentsWindow();
+            }            
         }
 
         private void procedureShowEditStudentsWindow()
@@ -126,7 +131,7 @@ namespace SkillsInternationalStudentManager
                         frmEditStudents.communicator.txtbxParentName.Text = arrayDataReader["ParentName"].ToString();
                         frmEditStudents.communicator.txtbxParentPhone.Text = arrayDataReader["ParentContactNo"].ToString();
                     }
-
+                    classPublicVariables.varSqlConnectionString.Close();
                     frmEditStudents.communicator.lblTitle.Text = "Edit this student: " + frmEditStudents.communicator.txtbxFName.Text + " " + frmEditStudents.communicator.txtbxLName.Text;
                     frmEditStudents.communicator.lblRegNo.Text = "Registration number: " + lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem);
                     frmEditStudents.communicator.varRegNo = int.Parse(lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem));
@@ -155,7 +160,9 @@ namespace SkillsInternationalStudentManager
                    classPublicVariables.varSqlConnectionString);
                     classPublicVariables.varSqlConnectionString.Open();
                     varSqlCommand.ExecuteNonQuery();
-                    MessageBox.Show("Successfully deleted record!");
+                    MessageBox.Show("One record deleted successfully!", "Database operation message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    classPublicVariables.varSqlConnectionString.Close();
+                    procedureGetDataAndFillListBox();
                 }
             }
             catch (Exception ex)
