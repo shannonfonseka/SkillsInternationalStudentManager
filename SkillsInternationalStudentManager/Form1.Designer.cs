@@ -59,9 +59,6 @@
             menuitemReportsWizard = new ToolStripMenuItem();
             menuitemStoredReports = new ToolStripMenuItem();
             menuWindow = new ToolStripMenuItem();
-            menuitemResetLayout = new ToolStripMenuItem();
-            menuitemCascadeWindows = new ToolStripMenuItem();
-            menuitemHideAll = new ToolStripMenuItem();
             menuHelp = new ToolStripMenuItem();
             menuitemAbout = new ToolStripMenuItem();
             menuAccessLevel = new ToolStripMenuItem();
@@ -136,6 +133,7 @@
             menuitemManageAdmins.ShortcutKeys = Keys.F2;
             menuitemManageAdmins.Size = new Size(195, 22);
             menuitemManageAdmins.Text = "Manage admins";
+            menuitemManageAdmins.Click += menuitemManageAdmins_Click;
             // 
             // menuitemRefreshDatabase
             // 
@@ -144,6 +142,7 @@
             menuitemRefreshDatabase.ShortcutKeys = Keys.F5;
             menuitemRefreshDatabase.Size = new Size(195, 22);
             menuitemRefreshDatabase.Text = "Refresh Database";
+            menuitemRefreshDatabase.Click += menuitemRefreshDatabase_Click;
             // 
             // menuitemDbSummary
             // 
@@ -151,6 +150,7 @@
             menuitemDbSummary.Name = "menuitemDbSummary";
             menuitemDbSummary.Size = new Size(195, 22);
             menuitemDbSummary.Text = "Database summary";
+            menuitemDbSummary.Click += menuitemDbSummary_Click;
             // 
             // toolStripSeparator4
             // 
@@ -196,6 +196,7 @@
             menuitemManageSubjects.Name = "menuitemManageSubjects";
             menuitemManageSubjects.Size = new Size(186, 22);
             menuitemManageSubjects.Text = "Manage s&ubjects";
+            menuitemManageSubjects.Click += menuitemManageSubjects_Click;
             // 
             // menuitemManageTimetables
             // 
@@ -203,6 +204,7 @@
             menuitemManageTimetables.Name = "menuitemManageTimetables";
             menuitemManageTimetables.Size = new Size(186, 22);
             menuitemManageTimetables.Text = "Manage timetables";
+            menuitemManageTimetables.Click += menuitemManageTimetables_Click;
             // 
             // menuitemManageClassrooms
             // 
@@ -210,6 +212,7 @@
             menuitemManageClassrooms.Name = "menuitemManageClassrooms";
             menuitemManageClassrooms.Size = new Size(186, 22);
             menuitemManageClassrooms.Text = "Manage classrooms";
+            menuitemManageClassrooms.Click += menuitemManageClassrooms_Click;
             // 
             // menuStudents
             // 
@@ -242,6 +245,7 @@
             menuitemManageParents.Name = "menuitemManageParents";
             menuitemManageParents.Size = new Size(217, 22);
             menuitemManageParents.Text = "Manage &Parents/Guardians";
+            menuitemManageParents.Click += menuitemManageParents_Click;
             // 
             // toolStripSeparator2
             // 
@@ -254,6 +258,7 @@
             menuitemAttendanceTracking.Name = "menuitemAttendanceTracking";
             menuitemAttendanceTracking.Size = new Size(217, 22);
             menuitemAttendanceTracking.Text = "Attendance tracking";
+            menuitemAttendanceTracking.Click += menuitemAttendanceTracking_Click;
             // 
             // menuitemStudentHealthRecords
             // 
@@ -261,6 +266,7 @@
             menuitemStudentHealthRecords.Name = "menuitemStudentHealthRecords";
             menuitemStudentHealthRecords.Size = new Size(217, 22);
             menuitemStudentHealthRecords.Text = "Student health records";
+            menuitemStudentHealthRecords.Click += menuitemStudentHealthRecords_Click;
             // 
             // menuitemFeesPayments
             // 
@@ -268,6 +274,7 @@
             menuitemFeesPayments.Name = "menuitemFeesPayments";
             menuitemFeesPayments.Size = new Size(217, 22);
             menuitemFeesPayments.Text = "Fees and payments";
+            menuitemFeesPayments.Click += menuitemFeesPayments_Click;
             // 
             // menuTeachers
             // 
@@ -283,6 +290,7 @@
             menuAddTeacher.Name = "menuAddTeacher";
             menuAddTeacher.Size = new Size(184, 22);
             menuAddTeacher.Text = "&Add new teacher";
+            menuAddTeacher.Click += menuAddTeacher_Click;
             // 
             // menuManageTeachers
             // 
@@ -291,6 +299,7 @@
             menuManageTeachers.ShortcutKeys = Keys.F4;
             menuManageTeachers.Size = new Size(184, 22);
             menuManageTeachers.Text = "Manage &Teachers";
+            menuManageTeachers.Click += menuManageTeachers_Click;
             // 
             // menuReports
             // 
@@ -306,6 +315,7 @@
             menuitemReportsWizard.Name = "menuitemReportsWizard";
             menuitemReportsWizard.Size = new Size(151, 22);
             menuitemReportsWizard.Text = "Reports &wizard";
+            menuitemReportsWizard.Click += menuitemReportsWizard_Click;
             // 
             // menuitemStoredReports
             // 
@@ -313,32 +323,14 @@
             menuitemStoredReports.Name = "menuitemStoredReports";
             menuitemStoredReports.Size = new Size(151, 22);
             menuitemStoredReports.Text = "Stored reports";
+            menuitemStoredReports.Click += menuitemStoredReports_Click;
             // 
             // menuWindow
             // 
-            menuWindow.DropDownItems.AddRange(new ToolStripItem[] { menuitemResetLayout, menuitemCascadeWindows, menuitemHideAll });
             menuWindow.Name = "menuWindow";
             menuWindow.Padding = new Padding(6, 0, 6, 0);
             menuWindow.Size = new Size(67, 20);
             menuWindow.Text = "&Window";
-            // 
-            // menuitemResetLayout
-            // 
-            menuitemResetLayout.Name = "menuitemResetLayout";
-            menuitemResetLayout.Size = new Size(183, 22);
-            menuitemResetLayout.Text = "Reset window layout";
-            // 
-            // menuitemCascadeWindows
-            // 
-            menuitemCascadeWindows.Name = "menuitemCascadeWindows";
-            menuitemCascadeWindows.Size = new Size(183, 22);
-            menuitemCascadeWindows.Text = "Cascade windows";
-            // 
-            // menuitemHideAll
-            // 
-            menuitemHideAll.Name = "menuitemHideAll";
-            menuitemHideAll.Size = new Size(183, 22);
-            menuitemHideAll.Text = "Hide all";
             // 
             // menuHelp
             // 
@@ -355,6 +347,7 @@
             menuitemAbout.ShortcutKeys = Keys.F1;
             menuitemAbout.Size = new Size(220, 22);
             menuitemAbout.Text = "About Student Manager";
+            menuitemAbout.Click += menuitemAbout_Click;
             // 
             // menuAccessLevel
             // 
@@ -398,6 +391,7 @@
             toolbarbtnManageTimetables.Text = "Manage|timetables";
             toolbarbtnManageTimetables.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnManageTimetables.ToolTipText = "Edit and manage timetables.";
+            toolbarbtnManageTimetables.Click += toolbarbtnManageTimetables_Click;
             // 
             // toolbarbtnManageStudents
             // 
@@ -432,6 +426,7 @@
             toolbarbtnManageClassrooms.Text = "Manage|classrooms";
             toolbarbtnManageClassrooms.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnManageClassrooms.ToolTipText = "Allocate and manage classroom students.";
+            toolbarbtnManageClassrooms.Click += toolbarbtnManageClassrooms_Click;
             // 
             // toolbarbtnAttendanceTracking
             // 
@@ -442,6 +437,7 @@
             toolbarbtnAttendanceTracking.Text = "Attendance|tracking";
             toolbarbtnAttendanceTracking.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnAttendanceTracking.ToolTipText = "Enter and track each students' attendances.";
+            toolbarbtnAttendanceTracking.Click += toolbarbtnAttendanceTracking_Click;
             // 
             // toolbarbtnFeesPayments
             // 
@@ -452,6 +448,7 @@
             toolbarbtnFeesPayments.Text = "Fees and|payments";
             toolbarbtnFeesPayments.TextImageRelation = TextImageRelation.ImageAboveText;
             toolbarbtnFeesPayments.ToolTipText = "Check dues and monitor transactions for subjects and courses.";
+            toolbarbtnFeesPayments.Click += toolbarbtnFeesPayments_Click;
             // 
             // toolStripSeparator1
             // 
@@ -487,6 +484,7 @@
             toolbarbtnCreateNewReportWizard.Name = "toolbarbtnCreateNewReportWizard";
             toolbarbtnCreateNewReportWizard.Size = new Size(233, 22);
             toolbarbtnCreateNewReportWizard.Text = "Create new report with Wizard";
+            toolbarbtnCreateNewReportWizard.Click += toolbarbtnCreateNewReportWizard_Click;
             // 
             // toolbarbtnStoredReports
             // 
@@ -495,6 +493,7 @@
             toolbarbtnStoredReports.Name = "toolbarbtnStoredReports";
             toolbarbtnStoredReports.Size = new Size(233, 22);
             toolbarbtnStoredReports.Text = "Stored reports";
+            toolbarbtnStoredReports.Click += toolbarbtnStoredReports_Click;
             // 
             // toolbarbtnLogOutSystem
             // 
@@ -570,7 +569,7 @@
             lblNoticeBoardDesc.Name = "lblNoticeBoardDesc";
             lblNoticeBoardDesc.Size = new Size(300, 50);
             lblNoticeBoardDesc.TabIndex = 2;
-            lblNoticeBoardDesc.Text = "Events and important messages about the school, will be listed here. Check for automated messages or create a new messages.";
+            lblNoticeBoardDesc.Text = "Events and important messages about the school, will be listed here.";
             // 
             // Form1
             // 
@@ -602,18 +601,12 @@
         #endregion
         private ToolStripMenuItem menuFile;
         private ToolStripMenuItem menuitemExit;
-        private ToolStripMenuItem menuTeachers;
-        private ToolStripMenuItem menuDatabase;
         private ToolStripMenuItem menuitemLogOutSystem;
-        private ToolStripMenuItem menuHelp;
-        private ToolStripMenuItem menuWindow;
         private ToolTip toolTip1;
         private ToolStripButton toolbarbtnLogOutSystem;
         public MenuStrip menuMain;
         public ToolStrip toolbarMain;
-        private ToolStripMenuItem menuSchool;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem menuReports;
         public ToolStripButton toolbarbtnManageStudents;
         public ToolStripButton toolbarbtnManageTeachers;
         public ToolStripButton toolbarbtnAddStudent;
@@ -638,9 +631,6 @@
         public ToolStripMenuItem menuitemManageAdmins;
         public ToolStripMenuItem menuitemManageParents;
         public ToolStripMenuItem menuitemAbout;
-        public ToolStripMenuItem menuitemResetLayout;
-        public ToolStripMenuItem menuitemCascadeWindows;
-        public ToolStripMenuItem menuitemHideAll;
         public ToolStripMenuItem menuitemManageSubjects;
         public ToolStripMenuItem menuitemReportsWizard;
         public ToolStripMenuItem menuitemRefreshDatabase;
@@ -656,5 +646,11 @@
         public ToolStripButton toolbarbtnManageTimetables;
         public ToolStripMenuItem menuitemStoredReports;
         public ToolStripDropDownButton toolbardrpdownbtnReportsWizard;
+        public ToolStripMenuItem menuTeachers;
+        public ToolStripMenuItem menuDatabase;
+        public ToolStripMenuItem menuHelp;
+        public ToolStripMenuItem menuWindow;
+        public ToolStripMenuItem menuSchool;
+        public ToolStripMenuItem menuReports;
     }
 }

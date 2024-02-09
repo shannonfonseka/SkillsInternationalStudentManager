@@ -141,6 +141,12 @@ namespace SkillsInternationalStudentManager
             toolbarbtnManageTeachers.Checked = true;
             varFrmManageTeachers.Focus();
         }
+
+        public void procedureShowFeatureDeprecation()
+        {
+            MessageBox.Show("This feature was intended to be coded, but kept for aesthetics.", "Feature Deprecation Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void menuitemLogOutSystem_Click(object sender, EventArgs e)
         {
             procedureLogOut();
@@ -197,6 +203,111 @@ namespace SkillsInternationalStudentManager
         private void toolbarbtnManageTeachers_Click(object sender, EventArgs e)
         {
             procedureShowManageTeachersWindow();
+        }
+
+        private void menuitemManageAdmins_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemRefreshDatabase_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemDbSummary_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemManageSubjects_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemManageTimetables_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemManageClassrooms_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemManageParents_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemAttendanceTracking_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemStudentHealthRecords_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemFeesPayments_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuAddTeacher_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuManageTeachers_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemReportsWizard_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemStoredReports_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void menuitemAbout_Click(object sender, EventArgs e)
+        {
+            procedureShowAboutProgramMessageBox();
+        }
+
+        private void toolbarbtnManageTimetables_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void toolbarbtnManageClassrooms_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void toolbarbtnAttendanceTracking_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void toolbarbtnFeesPayments_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void toolbarbtnCreateNewReportWizard_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
+        }
+
+        private void toolbarbtnStoredReports_Click(object sender, EventArgs e)
+        {
+            procedureShowFeatureDeprecation();
         }
     }
 }
