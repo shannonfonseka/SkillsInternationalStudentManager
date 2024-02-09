@@ -117,7 +117,7 @@ namespace SkillsInternationalStudentManager
 
         public void procedureShowAboutProgramMessageBox()
         {
-            MessageBox.Show("Skills International Student Manager (SISM)" + Environment.NewLine + "Version 01.01" + Environment.NewLine + Environment.NewLine + "(C) 2024 Shannon Fonseka. Made for ESOFT DiTech Final Project.", "About this program");
+            MessageBox.Show("Skills International Student Manager (SISM)" + Environment.NewLine + "Version 1.02 (Release)" + Environment.NewLine + Environment.NewLine + "(C) 2024 Shannon Fonseka. Made for ESOFT DiTech Final Project.", "About this program", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void procedureShowManageTeachersWindow()
@@ -144,7 +144,7 @@ namespace SkillsInternationalStudentManager
 
         public void procedureShowFeatureDeprecation()
         {
-            MessageBox.Show("This feature was intended to be coded, but kept for aesthetics.", "Feature Deprecation Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("This feature was intended to be coded fully, instead it is kept for user interface aesthetics.", "Feature Deprecation Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void menuitemLogOutSystem_Click(object sender, EventArgs e)

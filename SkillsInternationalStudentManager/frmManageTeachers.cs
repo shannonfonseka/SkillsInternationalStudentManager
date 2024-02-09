@@ -27,7 +27,7 @@ namespace SkillsInternationalStudentManager
         {            
             Form1.communicator.procedureShowFeatureDeprecation();
             Thread.Sleep(900);
-            Close();
+            //Close();
         }
     }
 }
