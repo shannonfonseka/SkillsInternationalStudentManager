@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SkillsInternationalStudentManager
-{    
+{
     public partial class frmEditStudents : Form
     {
         public int varRegNo = 0;
@@ -18,6 +18,24 @@ namespace SkillsInternationalStudentManager
         {
             InitializeComponent();
             communicator = this;
+        }
+        private void procedureClearForm()
+        {
+            txtbxFName.Clear();
+            txtbxLName.Clear();
+            dtpDOB.Value = DateTime.Now;
+            txtbxAddress.Clear();
+            txtbxEmail.Clear();
+            txtbxMPhone.Clear();
+            txtbxHPhone.Clear();
+            txtbxParentName.Clear();
+            txtbxParentNIC.Clear();
+            txtbxFName.Focus();
+        }
+
+        private void btnClearValues_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            procedureClearForm();
         }
     }
 }

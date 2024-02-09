@@ -403,6 +403,7 @@
             btnClearValues.TabStop = true;
             btnClearValues.Text = "Clear fields";
             btnClearValues.TextAlign = ContentAlignment.MiddleRight;
+            btnClearValues.LinkClicked += btnClearValues_LinkClicked;
             // 
             // frmEditStudents
             // 

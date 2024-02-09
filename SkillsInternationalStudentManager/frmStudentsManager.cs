@@ -1,5 +1,4 @@
 ﻿using Microsoft.Data.SqlClient;
-using System;
 using System.Data;
 
 namespace SkillsInternationalStudentManager
@@ -27,15 +26,26 @@ namespace SkillsInternationalStudentManager
                 varSqlAdapter.Fill(arrayDataSet, "tb_StudentRecords");
                 lstbxStudentRegNo.ValueMember = "StudentRegNo";
                 lstbxStudentRegNo.DataSource = arrayDataSet.Tables["tb_StudentRecords"];
+
+                lstbxStudentRegNo.SelectedIndex = 0;
+                btnAddStudent.Enabled = true;
+                btnEditStudent.Enabled = true;
+                btnRemoveStudent.Enabled = true;
+                procedureShowEditStudentsWindow();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (!ex.Message.Contains("Value of '0'"))
+                {
+                    MessageBox.Show(ex.Message);
+                    btnAddStudent.Enabled = false;
+                    btnEditStudent.Enabled = false;
+                    btnRemoveStudent.Enabled = false;
+                }
             }
             finally
             {
                 classPublicVariables.varSqlConnectionString.Close();
-                lstbxStudentRegNo.SelectedIndex = 0;
             }
         }
 
@@ -53,17 +63,9 @@ namespace SkillsInternationalStudentManager
         private void lstbxStudentRegNo_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
-            {
-                btnAddStudent.Enabled = true;
-                btnEditStudent.Enabled = true;
-                btnRemoveStudent.Enabled = true;
-            }
+            { }
             catch
-            {
-                btnAddStudent.Enabled = false;
-                btnEditStudent.Enabled = false;
-                btnRemoveStudent.Enabled = false;
-            }
+            { }
         }
 
         private void btnRefreshDB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -73,55 +75,97 @@ namespace SkillsInternationalStudentManager
 
         private void btnEditStudent_Click(object sender, EventArgs e)
         {
-            string varSqlQuery = "SELECT * FROM tb_StudentRecords WHERE StudentRegNo='" + lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem) + "';";
-            SqlCommand varSqlCommand = new SqlCommand(varSqlQuery, classPublicVariables.varSqlConnectionString);
-            classPublicVariables.varSqlConnectionString.Open();
+            procedureShowEditStudentsWindow();
+        }
 
-            SqlDataReader arrayDataReader;
-            string Gender;
+        private void lstbxStudentRegNo_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            { procedureShowEditStudentsWindow(); }
+            catch
+            { }
+        }
 
-            Form varFrmEditStudent = new frmEditStudents();            
-
-            arrayDataReader = varSqlCommand.ExecuteReader();
-            if (arrayDataReader.HasRows == true)
+        private void procedureShowEditStudentsWindow()
+        {
+            try
             {
-                while (arrayDataReader.Read())
+                string varSqlQuery = "SELECT * FROM tb_StudentRecords WHERE StudentRegNo='" + lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem) + "';";
+                SqlCommand varSqlCommand = new SqlCommand(varSqlQuery, classPublicVariables.varSqlConnectionString);
+                classPublicVariables.varSqlConnectionString.Open();
+
+                SqlDataReader arrayDataReader;
+                string Gender;
+
+                Form varFrmEditStudent = new frmEditStudents();
+
+                arrayDataReader = varSqlCommand.ExecuteReader();
+                if (arrayDataReader.HasRows == true)
                 {
-                    frmEditStudents.communicator.txtbxFName.Text = arrayDataReader["StudentFirstName"].ToString();
-                    frmEditStudents.communicator.txtbxLName.Text = arrayDataReader["StudentLastName"].ToString();
-                    frmEditStudents.communicator.dtpDOB.Text = arrayDataReader["StudentDOB"].ToString();
-                    Gender = arrayDataReader["StudentGender"].ToString();
-                    if (Gender == "Female")
+                    while (arrayDataReader.Read())
                     {
-                        frmEditStudents.communicator.radiobtnFemale.Checked = true;
-                        frmEditStudents.communicator.radiobtnMale.Checked = false;
+                        frmEditStudents.communicator.txtbxFName.Text = arrayDataReader["StudentFirstName"].ToString();
+                        frmEditStudents.communicator.txtbxLName.Text = arrayDataReader["StudentLastName"].ToString();
+                        frmEditStudents.communicator.dtpDOB.Text = arrayDataReader["StudentDOB"].ToString();
+                        Gender = arrayDataReader["StudentGender"].ToString();
+                        if (Gender == "Female")
+                        {
+                            frmEditStudents.communicator.radiobtnFemale.Checked = true;
+                            frmEditStudents.communicator.radiobtnMale.Checked = false;
+                        }
+                        else
+                        {
+                            frmEditStudents.communicator.radiobtnMale.Checked = true;
+                            frmEditStudents.communicator.radiobtnFemale.Checked = false;
+                        }
+                        frmEditStudents.communicator.txtbxAddress.Text = arrayDataReader["StudentAddress"].ToString();
+                        frmEditStudents.communicator.txtbxEmail.Text = arrayDataReader["StudentEmail"].ToString();
+                        frmEditStudents.communicator.txtbxMPhone.Text = arrayDataReader["StudentHomePhone"].ToString();
+                        frmEditStudents.communicator.txtbxHPhone.Text = arrayDataReader["StudentMobilePhone"].ToString();
+                        frmEditStudents.communicator.txtbxParentNIC.Text = arrayDataReader["ParentNIC"].ToString();
+                        frmEditStudents.communicator.txtbxParentName.Text = arrayDataReader["ParentName"].ToString();
+                        frmEditStudents.communicator.txtbxParentPhone.Text = arrayDataReader["ParentContactNo"].ToString();
                     }
-                    else
-                    {
-                        frmEditStudents.communicator.radiobtnMale.Checked = true;
-                        frmEditStudents.communicator.radiobtnFemale.Checked = false;
-                    }
-                    frmEditStudents.communicator.txtbxAddress.Text = arrayDataReader["StudentAddress"].ToString();
-                    frmEditStudents.communicator.txtbxEmail.Text = arrayDataReader["StudentEmail"].ToString();
-                    frmEditStudents.communicator.txtbxMPhone.Text = arrayDataReader["StudentHomePhone"].ToString();
-                    frmEditStudents.communicator.txtbxHPhone.Text = arrayDataReader["StudentMobilePhone"].ToString();
-                    frmEditStudents.communicator.txtbxParentNIC.Text = arrayDataReader["ParentNIC"].ToString();
-                    frmEditStudents.communicator.txtbxParentName.Text = arrayDataReader["ParentName"].ToString();
-                    frmEditStudents.communicator.txtbxParentPhone.Text = arrayDataReader["ParentContactNo"].ToString();
-                }
 
-                frmEditStudents.communicator.lblTitle.Text = "Edit this student: " + frmEditStudents.communicator.txtbxFName.Text + " "+ frmEditStudents.communicator.txtbxLName.Text;
-                frmEditStudents.communicator.lblRegNo.Text = "Registraton number: "+ lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem);
-                frmEditStudents.communicator.varRegNo = int.Parse(lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem));
-                varFrmEditStudent.MdiParent = Form1.communicator;
-                varFrmEditStudent.Show();
-                varFrmEditStudent.Focus();
-            }            
-            else
-            {
-                MessageBox.Show("Record Data not found", "data");
+                    frmEditStudents.communicator.lblTitle.Text = "Edit this student: " + frmEditStudents.communicator.txtbxFName.Text + " " + frmEditStudents.communicator.txtbxLName.Text;
+                    frmEditStudents.communicator.lblRegNo.Text = "Registration number: " + lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem);
+                    frmEditStudents.communicator.varRegNo = int.Parse(lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem));
+                    varFrmEditStudent.MdiParent = Form1.communicator;
+                    varFrmEditStudent.Show();
+                    varFrmEditStudent.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Record Data not found", "No data");
+                }
+                classPublicVariables.varSqlConnectionString.Close();
             }
-            classPublicVariables.varSqlConnectionString.Close();
+            catch { }
+        }
+
+        private void btnRemoveStudent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult varDialogResult = MessageBox.Show("Are you sure you want to delete this record? Please note that this change is irreversible! Be certain.", "Record deletion confirmation dialog", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (varDialogResult == DialogResult.Yes)
+                {
+                    string varSqlQuery = "DELETE FROM tb_StudentRecords WHERE StudentRegNo='" + lstbxStudentRegNo.GetItemText(lstbxStudentRegNo.SelectedItem) + "';";
+                    SqlCommand varSqlCommand = new SqlCommand(varSqlQuery,
+                   classPublicVariables.varSqlConnectionString);
+                    classPublicVariables.varSqlConnectionString.Open();
+                    varSqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Successfully deleted record!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                classPublicVariables.varSqlConnectionString.Close();
+            }
         }
     }
 }

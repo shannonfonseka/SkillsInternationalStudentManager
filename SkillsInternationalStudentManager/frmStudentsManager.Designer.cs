@@ -234,6 +234,7 @@
             btnRemoveStudent.Text = "Remove student";
             btnRemoveStudent.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnRemoveStudent.UseVisualStyleBackColor = true;
+            btnRemoveStudent.Click += btnRemoveStudent_Click;
             // 
             // lstbxStudentRegNo
             // 
@@ -247,6 +248,7 @@
             lstbxStudentRegNo.Size = new Size(582, 340);
             lstbxStudentRegNo.TabIndex = 6;
             lstbxStudentRegNo.SelectedIndexChanged += lstbxStudentRegNo_SelectedIndexChanged;
+            lstbxStudentRegNo.DoubleClick += lstbxStudentRegNo_DoubleClick;
             // 
             // frmStudentsManager
             // 

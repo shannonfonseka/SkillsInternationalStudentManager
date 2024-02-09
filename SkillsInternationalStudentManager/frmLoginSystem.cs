@@ -15,7 +15,11 @@ namespace SkillsInternationalStudentManager
 
         private void btnExitSystem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Environment.Exit(0);
+            DialogResult varDialogResult = MessageBox.Show("Are you sure you want to exit this system?","Exit confirmation dialog",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (varDialogResult == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void frmLoginSystem_FormClosing(object sender, FormClosingEventArgs e)
