@@ -32,7 +32,6 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             btnManageStudents = new LinkLabel();
-            btnManageParents = new LinkLabel();
             pictureBox1 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label2 = new Label();
@@ -99,7 +98,7 @@
             // 
             splitContainer1.Panel2.AutoScroll = true;
             splitContainer1.Panel2.Controls.Add(flowLayoutPanel2);
-            splitContainer1.Size = new Size(729, 442);
+            splitContainer1.Size = new Size(729, 441);
             splitContainer1.SplitterDistance = 160;
             splitContainer1.SplitterWidth = 3;
             splitContainer1.TabIndex = 0;
@@ -109,13 +108,12 @@
             flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Controls.Add(btnManageStudents);
-            flowLayoutPanel1.Controls.Add(btnManageParents);
             flowLayoutPanel1.Dock = DockStyle.Top;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Margin = new Padding(2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(156, 97);
+            flowLayoutPanel1.Size = new Size(156, 70);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.WrapContents = false;
             // 
@@ -140,24 +138,14 @@
             btnManageStudents.TabIndex = 15;
             btnManageStudents.TabStop = true;
             btnManageStudents.Text = "Manage students";
-            // 
-            // btnManageParents
-            // 
-            btnManageParents.AutoSize = true;
-            btnManageParents.Location = new Point(2, 70);
-            btnManageParents.Margin = new Padding(2, 0, 2, 12);
-            btnManageParents.Name = "btnManageParents";
-            btnManageParents.Size = new Size(149, 15);
-            btnManageParents.TabIndex = 16;
-            btnManageParents.TabStop = true;
-            btnManageParents.Text = "Manage parents/guardians";
+            btnManageStudents.LinkClicked += btnManageStudents_LinkClicked;
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Dock = DockStyle.Bottom;
             pictureBox1.Image = Properties.Resources._90sstudent_2__bg;
-            pictureBox1.Location = new Point(0, 306);
+            pictureBox1.Location = new Point(0, 305);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(156, 132);
@@ -177,7 +165,7 @@
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(0, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(562, 438);
+            flowLayoutPanel2.Size = new Size(562, 437);
             flowLayoutPanel2.TabIndex = 0;
             flowLayoutPanel2.WrapContents = false;
             // 
@@ -531,7 +519,7 @@
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(729, 442);
+            ClientSize = new Size(729, 441);
             Controls.Add(splitContainer1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Location = new Point(10, 10);
@@ -568,7 +556,6 @@
         private Label label1;
         private LinkLabel btnManageStudents;
         private PictureBox pictureBox1;
-        private LinkLabel btnManageParents;
         private FlowLayoutPanel flowLayoutPanel2;
         private Label label2;
         private TableLayoutPanel tableLayoutPanel1;

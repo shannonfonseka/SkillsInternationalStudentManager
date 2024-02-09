@@ -32,8 +32,6 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             btnRefreshDB = new LinkLabel();
-            btnManageTeachers = new LinkLabel();
-            btnManageParents = new LinkLabel();
             pictureBox1 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label2 = new Label();
@@ -43,7 +41,6 @@
             btnEditStudent = new Button();
             btnPrintList = new Button();
             btnRemoveStudent = new Button();
-            lstbxStudentName = new ListBox();
             lstbxStudentRegNo = new ListBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -84,14 +81,12 @@
             flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Controls.Add(btnRefreshDB);
-            flowLayoutPanel1.Controls.Add(btnManageTeachers);
-            flowLayoutPanel1.Controls.Add(btnManageParents);
             flowLayoutPanel1.Dock = DockStyle.Top;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Margin = new Padding(2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(156, 124);
+            flowLayoutPanel1.Size = new Size(156, 70);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.WrapContents = false;
             // 
@@ -116,28 +111,7 @@
             btnRefreshDB.TabIndex = 0;
             btnRefreshDB.TabStop = true;
             btnRefreshDB.Text = "Refresh database";
-            // 
-            // btnManageTeachers
-            // 
-            btnManageTeachers.AutoSize = true;
-            btnManageTeachers.Location = new Point(2, 70);
-            btnManageTeachers.Margin = new Padding(2, 0, 2, 12);
-            btnManageTeachers.Name = "btnManageTeachers";
-            btnManageTeachers.Size = new Size(97, 15);
-            btnManageTeachers.TabIndex = 2;
-            btnManageTeachers.TabStop = true;
-            btnManageTeachers.Text = "Manage teachers";
-            // 
-            // btnManageParents
-            // 
-            btnManageParents.AutoSize = true;
-            btnManageParents.Location = new Point(2, 97);
-            btnManageParents.Margin = new Padding(2, 0, 2, 12);
-            btnManageParents.Name = "btnManageParents";
-            btnManageParents.Size = new Size(149, 15);
-            btnManageParents.TabIndex = 4;
-            btnManageParents.TabStop = true;
-            btnManageParents.Text = "Manage parents/guardians";
+            btnRefreshDB.LinkClicked += btnRefreshDB_LinkClicked;
             // 
             // pictureBox1
             // 
@@ -157,7 +131,6 @@
             flowLayoutPanel2.Controls.Add(label2);
             flowLayoutPanel2.Controls.Add(label3);
             flowLayoutPanel2.Controls.Add(tableLayoutPanel1);
-            flowLayoutPanel2.Controls.Add(lstbxStudentName);
             flowLayoutPanel2.Controls.Add(lstbxStudentRegNo);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
@@ -229,17 +202,18 @@
             btnEditStudent.Location = new Point(112, 2);
             btnEditStudent.Margin = new Padding(2);
             btnEditStudent.Name = "btnEditStudent";
-            btnEditStudent.Size = new Size(110, 23);
+            btnEditStudent.Size = new Size(136, 23);
             btnEditStudent.TabIndex = 2;
-            btnEditStudent.Text = "Edit student";
+            btnEditStudent.Text = "View/edit student";
             btnEditStudent.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnEditStudent.UseVisualStyleBackColor = true;
+            btnEditStudent.Click += btnEditStudent_Click;
             // 
             // btnPrintList
             // 
             btnPrintList.Enabled = false;
             btnPrintList.Image = Properties.Resources.printer;
-            btnPrintList.Location = new Point(360, 2);
+            btnPrintList.Location = new Point(386, 2);
             btnPrintList.Margin = new Padding(2);
             btnPrintList.Name = "btnPrintList";
             btnPrintList.Size = new Size(85, 23);
@@ -252,7 +226,7 @@
             // 
             btnRemoveStudent.Enabled = false;
             btnRemoveStudent.Image = Properties.Resources.cross;
-            btnRemoveStudent.Location = new Point(226, 2);
+            btnRemoveStudent.Location = new Point(252, 2);
             btnRemoveStudent.Margin = new Padding(2);
             btnRemoveStudent.Name = "btnRemoveStudent";
             btnRemoveStudent.Size = new Size(130, 23);
@@ -261,28 +235,18 @@
             btnRemoveStudent.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnRemoveStudent.UseVisualStyleBackColor = true;
             // 
-            // lstbxStudentName
-            // 
-            lstbxStudentName.FormattingEnabled = true;
-            lstbxStudentName.ItemHeight = 15;
-            lstbxStudentName.Location = new Point(10, 97);
-            lstbxStudentName.Margin = new Padding(10, 10, 3, 3);
-            lstbxStudentName.Name = "lstbxStudentName";
-            lstbxStudentName.ScrollAlwaysVisible = true;
-            lstbxStudentName.Size = new Size(582, 379);
-            lstbxStudentName.TabIndex = 5;
-            lstbxStudentName.SelectedIndexChanged += lstbxStudentName_SelectedIndexChanged;
-            // 
             // lstbxStudentRegNo
             // 
+            lstbxStudentRegNo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lstbxStudentRegNo.FormattingEnabled = true;
-            lstbxStudentRegNo.ItemHeight = 15;
-            lstbxStudentRegNo.Location = new Point(10, 489);
+            lstbxStudentRegNo.ItemHeight = 21;
+            lstbxStudentRegNo.Location = new Point(10, 97);
             lstbxStudentRegNo.Margin = new Padding(10, 10, 3, 3);
             lstbxStudentRegNo.Name = "lstbxStudentRegNo";
             lstbxStudentRegNo.ScrollAlwaysVisible = true;
-            lstbxStudentRegNo.Size = new Size(582, 379);
+            lstbxStudentRegNo.Size = new Size(582, 340);
             lstbxStudentRegNo.TabIndex = 6;
+            lstbxStudentRegNo.SelectedIndexChanged += lstbxStudentRegNo_SelectedIndexChanged;
             // 
             // frmStudentsManager
             // 
@@ -319,9 +283,7 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
         private LinkLabel btnRefreshDB;
-        private LinkLabel btnManageTeachers;
         private PictureBox pictureBox1;
-        private LinkLabel btnManageParents;
         private FlowLayoutPanel flowLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnEditStudent;
@@ -330,7 +292,6 @@
         private Button btnAddStudent;
         private Label label2;
         private Label label3;
-        private ListBox lstbxStudentName;
         private ListBox lstbxStudentRegNo;
     }
 }

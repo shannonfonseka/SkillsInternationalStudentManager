@@ -97,5 +97,10 @@ namespace SkillsInternationalStudentManager
         {
             procedureClearForm();
         }
+
+        private void btnManageStudents_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1.communicator.procedureShowManageStudentsWindow();
+        }
     }
 }

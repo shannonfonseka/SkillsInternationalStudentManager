@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             flowLayoutPanel2 = new FlowLayoutPanel();
-            label2 = new Label();
+            lblTitle = new Label();
+            lblRegNo = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             label4 = new Label();
             label5 = new Label();
@@ -68,27 +69,38 @@
             // 
             flowLayoutPanel2.AutoScroll = true;
             flowLayoutPanel2.AutoSize = true;
-            flowLayoutPanel2.Controls.Add(label2);
+            flowLayoutPanel2.Controls.Add(lblTitle);
+            flowLayoutPanel2.Controls.Add(lblRegNo);
             flowLayoutPanel2.Controls.Add(tableLayoutPanel1);
             flowLayoutPanel2.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(0, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(584, 411);
+            flowLayoutPanel2.Size = new Size(560, 407);
             flowLayoutPanel2.TabIndex = 1;
             flowLayoutPanel2.WrapContents = false;
             // 
-            // label2
+            // lblTitle
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(10, 10);
-            label2.Margin = new Padding(10, 10, 3, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 21);
-            label2.TabIndex = 1;
-            label2.Text = "Edit this student";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(10, 10);
+            lblTitle.Margin = new Padding(10, 10, 3, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(121, 21);
+            lblTitle.TabIndex = 1;
+            lblTitle.Text = "Edit this student";
+            // 
+            // lblRegNo
+            // 
+            lblRegNo.AutoSize = true;
+            lblRegNo.Location = new Point(10, 41);
+            lblRegNo.Margin = new Padding(10, 10, 3, 0);
+            lblRegNo.Name = "lblRegNo";
+            lblRegNo.Size = new Size(135, 15);
+            lblRegNo.TabIndex = 16;
+            lblRegNo.Text = "Registration number: XX";
             // 
             // tableLayoutPanel1
             // 
@@ -117,7 +129,7 @@
             tableLayoutPanel1.Controls.Add(txtbxParentPhone, 1, 10);
             tableLayoutPanel1.Controls.Add(flowLayoutPanel3, 1, 3);
             tableLayoutPanel1.Controls.Add(dtpDOB, 1, 2);
-            tableLayoutPanel1.Location = new Point(10, 41);
+            tableLayoutPanel1.Location = new Point(10, 66);
             tableLayoutPanel1.Margin = new Padding(10, 10, 3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 11;
@@ -361,7 +373,7 @@
             flowLayoutPanel4.AutoSize = true;
             flowLayoutPanel4.Controls.Add(btnAddStudent);
             flowLayoutPanel4.Controls.Add(btnClearValues);
-            flowLayoutPanel4.Location = new Point(10, 559);
+            flowLayoutPanel4.Location = new Point(10, 584);
             flowLayoutPanel4.Margin = new Padding(10, 10, 3, 20);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
             flowLayoutPanel4.Size = new Size(315, 35);
@@ -396,9 +408,9 @@
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(584, 411);
+            ClientSize = new Size(560, 407);
             Controls.Add(flowLayoutPanel2);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Location = new Point(10, 10);
             MaximizeBox = false;
             Name = "frmEditStudents";
@@ -432,21 +444,23 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private TextBox txtbxFName;
-        private TextBox txtbxLName;
-        private TextBox txtbxAddress;
-        private TextBox txtbxEmail;
-        private TextBox txtbxMPhone;
-        private TextBox txtbxHPhone;
-        private TextBox txtbxParentName;
-        private TextBox txtbxParentNIC;
-        private TextBox txtbxParentPhone;
         private FlowLayoutPanel flowLayoutPanel3;
-        private RadioButton radiobtnMale;
-        private RadioButton radiobtnFemale;
-        private DateTimePicker dtpDOB;
         private FlowLayoutPanel flowLayoutPanel4;
         private Button btnAddStudent;
         private LinkLabel btnClearValues;
+        public Label lblRegNo;
+        public TextBox txtbxFName;
+        public TextBox txtbxLName;
+        public TextBox txtbxAddress;
+        public TextBox txtbxEmail;
+        public TextBox txtbxMPhone;
+        public TextBox txtbxHPhone;
+        public TextBox txtbxParentName;
+        public TextBox txtbxParentNIC;
+        public RadioButton radiobtnMale;
+        public RadioButton radiobtnFemale;
+        public DateTimePicker dtpDOB;
+        public TextBox txtbxParentPhone;
+        public Label lblTitle;
     }
 }

@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SkillsInternationalStudentManager
-{
+{    
     public partial class frmEditStudents : Form
     {
+        public int varRegNo = 0;
+        public static frmEditStudents? communicator;
         public frmEditStudents()
         {
             InitializeComponent();
+            communicator = this;
         }
     }
 }
