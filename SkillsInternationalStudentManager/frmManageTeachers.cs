@@ -22,5 +22,12 @@ namespace SkillsInternationalStudentManager
             Form1.communicator.varIsManageTeachersWindowOpen = false;
             Form1.communicator.toolbarbtnManageTeachers.Checked = false;
         }
+
+        private void frmManageTeachers_Load(object sender, EventArgs e)
+        {            
+            Form1.communicator.procedureShowFeatureDeprecation();
+            Thread.Sleep(900);
+            Close();
+        }
     }
 }

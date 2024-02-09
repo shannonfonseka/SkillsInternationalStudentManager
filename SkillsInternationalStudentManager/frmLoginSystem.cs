@@ -69,6 +69,20 @@ namespace SkillsInternationalStudentManager
                         MessageBox.Show("You are now logged as an administrator. You have full access to this system.", "Login information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         Form1.communicator.menuAccessLevel.Text = "Administrator Access Mode";
+                        Form1.communicator.menuDatabase.Enabled = true;
+                        Form1.communicator.menuSchool.Enabled = true;
+                        Form1.communicator.menuReports.Enabled = true;
+                        Form1.communicator.menuTeachers.Enabled = true;
+                        Form1.communicator.menuitemAddStudent.Enabled = true;
+                        Form1.communicator.menuitemManageStudents.Enabled = true;
+                        Form1.communicator.menuitemManageParents.Enabled = true;
+                        Form1.communicator.menuitemStudentHealthRecords.Enabled = true;
+                        Form1.communicator.toolbarbtnManageStudents.Enabled = true;
+                        Form1.communicator.toolbarbtnManageClassrooms.Enabled = true;
+                        Form1.communicator.toolbarbtnManageTeachers.Enabled = true;
+                        Form1.communicator.toolbarbtnAddStudent.Enabled = true;
+                        Form1.communicator.toolbarbtnManageTimetables.Enabled = true;
+                        Form1.communicator.toolbardrpdownbtnReportsWizard.Enabled = true;
                     }
                     else
                     {
@@ -82,7 +96,13 @@ namespace SkillsInternationalStudentManager
                         Form1.communicator.menuitemAddStudent.Enabled = false;
                         Form1.communicator.menuitemManageStudents.Enabled = false;
                         Form1.communicator.menuitemManageParents.Enabled = false;
-                        Form1.communicator.menuitemStudentHealthRecords.Enabled = false;             
+                        Form1.communicator.menuitemStudentHealthRecords.Enabled = false;
+                        Form1.communicator.toolbarbtnManageStudents.Enabled = false;
+                        Form1.communicator.toolbarbtnManageClassrooms.Enabled = false;
+                        Form1.communicator.toolbarbtnManageTeachers.Enabled = false;
+                        Form1.communicator.toolbarbtnAddStudent.Enabled = false;
+                        Form1.communicator.toolbarbtnManageTimetables.Enabled = false;
+                        Form1.communicator.toolbardrpdownbtnReportsWizard.Enabled= false;
                     }
                     Form1.communicator.Enabled = true;
                     Form1.communicator.toolbarMain.Enabled = true;
