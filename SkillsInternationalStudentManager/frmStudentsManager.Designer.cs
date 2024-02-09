@@ -43,7 +43,8 @@
             btnEditStudent = new Button();
             btnPrintList = new Button();
             btnRemoveStudent = new Button();
-            lstbxStudents = new ListBox();
+            lstbxStudentName = new ListBox();
+            lstbxStudentRegNo = new ListBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -156,7 +157,8 @@
             flowLayoutPanel2.Controls.Add(label2);
             flowLayoutPanel2.Controls.Add(label3);
             flowLayoutPanel2.Controls.Add(tableLayoutPanel1);
-            flowLayoutPanel2.Controls.Add(lstbxStudents);
+            flowLayoutPanel2.Controls.Add(lstbxStudentName);
+            flowLayoutPanel2.Controls.Add(lstbxStudentRegNo);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(0, 0);
@@ -204,7 +206,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(580, 28);
+            tableLayoutPanel1.Size = new Size(584, 28);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // btnAddStudent
@@ -259,16 +261,28 @@
             btnRemoveStudent.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnRemoveStudent.UseVisualStyleBackColor = true;
             // 
-            // lstbxStudents
+            // lstbxStudentName
             // 
-            lstbxStudents.FormattingEnabled = true;
-            lstbxStudents.ItemHeight = 15;
-            lstbxStudents.Location = new Point(10, 97);
-            lstbxStudents.Margin = new Padding(10, 10, 3, 3);
-            lstbxStudents.Name = "lstbxStudents";
-            lstbxStudents.ScrollAlwaysVisible = true;
-            lstbxStudents.Size = new Size(574, 379);
-            lstbxStudents.TabIndex = 5;
+            lstbxStudentName.FormattingEnabled = true;
+            lstbxStudentName.ItemHeight = 15;
+            lstbxStudentName.Location = new Point(10, 97);
+            lstbxStudentName.Margin = new Padding(10, 10, 3, 3);
+            lstbxStudentName.Name = "lstbxStudentName";
+            lstbxStudentName.ScrollAlwaysVisible = true;
+            lstbxStudentName.Size = new Size(582, 379);
+            lstbxStudentName.TabIndex = 5;
+            lstbxStudentName.SelectedIndexChanged += lstbxStudentName_SelectedIndexChanged;
+            // 
+            // lstbxStudentRegNo
+            // 
+            lstbxStudentRegNo.FormattingEnabled = true;
+            lstbxStudentRegNo.ItemHeight = 15;
+            lstbxStudentRegNo.Location = new Point(10, 489);
+            lstbxStudentRegNo.Margin = new Padding(10, 10, 3, 3);
+            lstbxStudentRegNo.Name = "lstbxStudentRegNo";
+            lstbxStudentRegNo.ScrollAlwaysVisible = true;
+            lstbxStudentRegNo.Size = new Size(582, 379);
+            lstbxStudentRegNo.TabIndex = 6;
             // 
             // frmStudentsManager
             // 
@@ -316,6 +330,7 @@
         private Button btnAddStudent;
         private Label label2;
         private Label label3;
-        private ListBox lstbxStudents;
+        private ListBox lstbxStudentName;
+        private ListBox lstbxStudentRegNo;
     }
 }

@@ -55,10 +55,13 @@
             radiobtnMale = new RadioButton();
             radiobtnFemale = new RadioButton();
             dtpDOB = new DateTimePicker();
+            flowLayoutPanel4 = new FlowLayoutPanel();
             btnAddStudent = new Button();
+            btnClearValues = new LinkLabel();
             flowLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
+            flowLayoutPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -67,12 +70,12 @@
             flowLayoutPanel2.AutoSize = true;
             flowLayoutPanel2.Controls.Add(label2);
             flowLayoutPanel2.Controls.Add(tableLayoutPanel1);
-            flowLayoutPanel2.Controls.Add(btnAddStudent);
+            flowLayoutPanel2.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(0, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(584, 461);
+            flowLayoutPanel2.Size = new Size(584, 411);
             flowLayoutPanel2.TabIndex = 1;
             flowLayoutPanel2.WrapContents = false;
             // 
@@ -353,24 +356,47 @@
             dtpDOB.Size = new Size(122, 23);
             dtpDOB.TabIndex = 4;
             // 
+            // flowLayoutPanel4
+            // 
+            flowLayoutPanel4.AutoSize = true;
+            flowLayoutPanel4.Controls.Add(btnAddStudent);
+            flowLayoutPanel4.Controls.Add(btnClearValues);
+            flowLayoutPanel4.Location = new Point(10, 559);
+            flowLayoutPanel4.Margin = new Padding(10, 10, 3, 20);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new Size(315, 35);
+            flowLayoutPanel4.TabIndex = 15;
+            // 
             // btnAddStudent
             // 
             btnAddStudent.Image = Properties.Resources.database_save;
-            btnAddStudent.Location = new Point(10, 559);
-            btnAddStudent.Margin = new Padding(10, 10, 3, 20);
+            btnAddStudent.Location = new Point(3, 3);
             btnAddStudent.Name = "btnAddStudent";
-            btnAddStudent.Size = new Size(142, 29);
+            btnAddStudent.Size = new Size(197, 29);
             btnAddStudent.TabIndex = 14;
-            btnAddStudent.Text = "Save changes";
+            btnAddStudent.Text = "Update and save changes";
             btnAddStudent.TextAlign = ContentAlignment.MiddleRight;
             btnAddStudent.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAddStudent.UseVisualStyleBackColor = true;
+            // 
+            // btnClearValues
+            // 
+            btnClearValues.Image = Properties.Resources.search_field;
+            btnClearValues.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClearValues.Location = new Point(223, 5);
+            btnClearValues.Margin = new Padding(20, 5, 3, 0);
+            btnClearValues.Name = "btnClearValues";
+            btnClearValues.Size = new Size(89, 23);
+            btnClearValues.TabIndex = 15;
+            btnClearValues.TabStop = true;
+            btnClearValues.Text = "Clear fields";
+            btnClearValues.TextAlign = ContentAlignment.MiddleRight;
             // 
             // frmEditStudents
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(584, 461);
+            ClientSize = new Size(584, 411);
             Controls.Add(flowLayoutPanel2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Location = new Point(10, 10);
@@ -378,13 +404,14 @@
             Name = "frmEditStudents";
             ShowIcon = false;
             StartPosition = FormStartPosition.Manual;
-            Text = "Add a new Student window";
+            Text = "Edit student window";
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             flowLayoutPanel3.ResumeLayout(false);
             flowLayoutPanel3.PerformLayout();
+            flowLayoutPanel4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -418,6 +445,8 @@
         private RadioButton radiobtnMale;
         private RadioButton radiobtnFemale;
         private DateTimePicker dtpDOB;
+        private FlowLayoutPanel flowLayoutPanel4;
         private Button btnAddStudent;
+        private LinkLabel btnClearValues;
     }
 }

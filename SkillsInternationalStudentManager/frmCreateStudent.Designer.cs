@@ -64,7 +64,9 @@
             radiobtnMale = new RadioButton();
             radiobtnFemale = new RadioButton();
             dtpDOB = new DateTimePicker();
+            flowLayoutPanel4 = new FlowLayoutPanel();
             btnAddStudent = new Button();
+            btnClearValues = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -74,6 +76,7 @@
             flowLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
+            flowLayoutPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -96,7 +99,7 @@
             // 
             splitContainer1.Panel2.AutoScroll = true;
             splitContainer1.Panel2.Controls.Add(flowLayoutPanel2);
-            splitContainer1.Size = new Size(786, 442);
+            splitContainer1.Size = new Size(729, 442);
             splitContainer1.SplitterDistance = 160;
             splitContainer1.SplitterWidth = 3;
             splitContainer1.TabIndex = 0;
@@ -169,12 +172,12 @@
             flowLayoutPanel2.Controls.Add(label2);
             flowLayoutPanel2.Controls.Add(label16);
             flowLayoutPanel2.Controls.Add(tableLayoutPanel1);
-            flowLayoutPanel2.Controls.Add(btnAddStudent);
+            flowLayoutPanel2.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel2.Dock = DockStyle.Fill;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(0, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(619, 438);
+            flowLayoutPanel2.Size = new Size(562, 438);
             flowLayoutPanel2.TabIndex = 0;
             flowLayoutPanel2.WrapContents = false;
             // 
@@ -486,13 +489,23 @@
             dtpDOB.Size = new Size(122, 23);
             dtpDOB.TabIndex = 4;
             // 
+            // flowLayoutPanel4
+            // 
+            flowLayoutPanel4.AutoSize = true;
+            flowLayoutPanel4.Controls.Add(btnAddStudent);
+            flowLayoutPanel4.Controls.Add(btnClearValues);
+            flowLayoutPanel4.Location = new Point(10, 589);
+            flowLayoutPanel4.Margin = new Padding(10, 10, 3, 20);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new Size(275, 35);
+            flowLayoutPanel4.TabIndex = 15;
+            // 
             // btnAddStudent
             // 
             btnAddStudent.Image = Properties.Resources.user_add;
-            btnAddStudent.Location = new Point(10, 589);
-            btnAddStudent.Margin = new Padding(10, 10, 3, 20);
+            btnAddStudent.Location = new Point(3, 3);
             btnAddStudent.Name = "btnAddStudent";
-            btnAddStudent.Size = new Size(142, 29);
+            btnAddStudent.Size = new Size(157, 29);
             btnAddStudent.TabIndex = 14;
             btnAddStudent.Text = "Add this student";
             btnAddStudent.TextAlign = ContentAlignment.MiddleRight;
@@ -500,11 +513,25 @@
             btnAddStudent.UseVisualStyleBackColor = true;
             btnAddStudent.Click += btnAddStudent_Click;
             // 
+            // btnClearValues
+            // 
+            btnClearValues.Image = Properties.Resources.search_field;
+            btnClearValues.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClearValues.Location = new Point(183, 5);
+            btnClearValues.Margin = new Padding(20, 5, 3, 0);
+            btnClearValues.Name = "btnClearValues";
+            btnClearValues.Size = new Size(89, 23);
+            btnClearValues.TabIndex = 15;
+            btnClearValues.TabStop = true;
+            btnClearValues.Text = "Clear fields";
+            btnClearValues.TextAlign = ContentAlignment.MiddleRight;
+            btnClearValues.LinkClicked += btnClearValues_LinkClicked;
+            // 
             // frmCreateStudent
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(786, 442);
+            ClientSize = new Size(729, 442);
             Controls.Add(splitContainer1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Location = new Point(10, 10);
@@ -530,6 +557,7 @@
             tableLayoutPanel1.PerformLayout();
             flowLayoutPanel3.ResumeLayout(false);
             flowLayoutPanel3.PerformLayout();
+            flowLayoutPanel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -572,5 +600,7 @@
         private RadioButton radiobtnFemale;
         private Button btnAddStudent;
         private DateTimePicker dtpDOB;
+        private FlowLayoutPanel flowLayoutPanel4;
+        private LinkLabel btnClearValues;
     }
 }
